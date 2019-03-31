@@ -1,0 +1,613 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F96662B022511166008850A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96662AF22511166008850A4 /* AppDelegate.swift */; };
+		F96662B722511167008850A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F96662B622511167008850A4 /* Assets.xcassets */; };
+		F96662BA22511167008850A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F96662B822511167008850A4 /* LaunchScreen.storyboard */; };
+		F96662C522511168008850A4 /* bloomIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96662C422511168008850A4 /* bloomIOSTests.swift */; };
+		F96662D022511168008850A4 /* bloomIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96662CF22511168008850A4 /* bloomIOSUITests.swift */; };
+		F96662DF22511208008850A4 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96662DD22511208008850A4 /* EventViewController.swift */; };
+		F96662E3225113E4008850A4 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96662E1225113E4008850A4 /* AddEventViewController.swift */; };
+		F96662E4225113E4008850A4 /* AddEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96662E2225113E4008850A4 /* AddEventViewController.xib */; };
+		F96662E62251198D008850A4 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96662E52251198D008850A4 /* EventViewController.xib */; };
+		F96662EB225126AC008850A4 /* EventServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96662EA225126AC008850A4 /* EventServices.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F96662C122511168008850A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F96662A422511166008850A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F96662AB22511166008850A4;
+			remoteInfo = bloomIOS;
+		};
+		F96662CC22511168008850A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F96662A422511166008850A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F96662AB22511166008850A4;
+			remoteInfo = bloomIOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F96662AC22511166008850A4 /* bloomIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bloomIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F96662AF22511166008850A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F96662B622511167008850A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F96662B922511167008850A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F96662BB22511167008850A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F96662C022511168008850A4 /* bloomIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bloomIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F96662C422511168008850A4 /* bloomIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bloomIOSTests.swift; sourceTree = "<group>"; };
+		F96662C622511168008850A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F96662CB22511168008850A4 /* bloomIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bloomIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F96662CF22511168008850A4 /* bloomIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bloomIOSUITests.swift; sourceTree = "<group>"; };
+		F96662D122511168008850A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F96662DD22511208008850A4 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		F96662E1225113E4008850A4 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		F96662E2225113E4008850A4 /* AddEventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddEventViewController.xib; sourceTree = "<group>"; };
+		F96662E52251198D008850A4 /* EventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventViewController.xib; sourceTree = "<group>"; };
+		F96662EA225126AC008850A4 /* EventServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventServices.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F96662A922511166008850A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F96662BD22511168008850A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F96662C822511168008850A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F96662A322511166008850A4 = {
+			isa = PBXGroup;
+			children = (
+				F96662AE22511166008850A4 /* bloomIOS */,
+				F96662C322511168008850A4 /* bloomIOSTests */,
+				F96662CE22511168008850A4 /* bloomIOSUITests */,
+				F96662AD22511166008850A4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F96662AD22511166008850A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F96662AC22511166008850A4 /* bloomIOS.app */,
+				F96662C022511168008850A4 /* bloomIOSTests.xctest */,
+				F96662CB22511168008850A4 /* bloomIOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F96662AE22511166008850A4 /* bloomIOS */ = {
+			isa = PBXGroup;
+			children = (
+				F96662E822512682008850A4 /* Scenes */,
+				F96662E72251267A008850A4 /* Services */,
+				F96662AF22511166008850A4 /* AppDelegate.swift */,
+				F96662B622511167008850A4 /* Assets.xcassets */,
+				F96662B822511167008850A4 /* LaunchScreen.storyboard */,
+				F96662BB22511167008850A4 /* Info.plist */,
+			);
+			path = bloomIOS;
+			sourceTree = "<group>";
+		};
+		F96662C322511168008850A4 /* bloomIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				F96662C422511168008850A4 /* bloomIOSTests.swift */,
+				F96662C622511168008850A4 /* Info.plist */,
+			);
+			path = bloomIOSTests;
+			sourceTree = "<group>";
+		};
+		F96662CE22511168008850A4 /* bloomIOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F96662CF22511168008850A4 /* bloomIOSUITests.swift */,
+				F96662D122511168008850A4 /* Info.plist */,
+			);
+			path = bloomIOSUITests;
+			sourceTree = "<group>";
+		};
+		F96662E72251267A008850A4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F96662EA225126AC008850A4 /* EventServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F96662E822512682008850A4 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F96662E922512698008850A4 /* Events */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F96662E922512698008850A4 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				F96662DD22511208008850A4 /* EventViewController.swift */,
+				F96662E52251198D008850A4 /* EventViewController.xib */,
+				F96662E1225113E4008850A4 /* AddEventViewController.swift */,
+				F96662E2225113E4008850A4 /* AddEventViewController.xib */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F96662AB22511166008850A4 /* bloomIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F96662D422511168008850A4 /* Build configuration list for PBXNativeTarget "bloomIOS" */;
+			buildPhases = (
+				F96662A822511166008850A4 /* Sources */,
+				F96662A922511166008850A4 /* Frameworks */,
+				F96662AA22511166008850A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = bloomIOS;
+			productName = bloomIOS;
+			productReference = F96662AC22511166008850A4 /* bloomIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F96662BF22511168008850A4 /* bloomIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F96662D722511168008850A4 /* Build configuration list for PBXNativeTarget "bloomIOSTests" */;
+			buildPhases = (
+				F96662BC22511168008850A4 /* Sources */,
+				F96662BD22511168008850A4 /* Frameworks */,
+				F96662BE22511168008850A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F96662C222511168008850A4 /* PBXTargetDependency */,
+			);
+			name = bloomIOSTests;
+			productName = bloomIOSTests;
+			productReference = F96662C022511168008850A4 /* bloomIOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F96662CA22511168008850A4 /* bloomIOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F96662DA22511168008850A4 /* Build configuration list for PBXNativeTarget "bloomIOSUITests" */;
+			buildPhases = (
+				F96662C722511168008850A4 /* Sources */,
+				F96662C822511168008850A4 /* Frameworks */,
+				F96662C922511168008850A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F96662CD22511168008850A4 /* PBXTargetDependency */,
+			);
+			name = bloomIOSUITests;
+			productName = bloomIOSUITests;
+			productReference = F96662CB22511168008850A4 /* bloomIOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F96662A422511166008850A4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Tristan Luong";
+				TargetAttributes = {
+					F96662AB22511166008850A4 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					F96662BF22511168008850A4 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = F96662AB22511166008850A4;
+					};
+					F96662CA22511168008850A4 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = F96662AB22511166008850A4;
+					};
+				};
+			};
+			buildConfigurationList = F96662A722511166008850A4 /* Build configuration list for PBXProject "bloomIOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F96662A322511166008850A4;
+			productRefGroup = F96662AD22511166008850A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F96662AB22511166008850A4 /* bloomIOS */,
+				F96662BF22511168008850A4 /* bloomIOSTests */,
+				F96662CA22511168008850A4 /* bloomIOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F96662AA22511166008850A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F96662BA22511167008850A4 /* LaunchScreen.storyboard in Resources */,
+				F96662E62251198D008850A4 /* EventViewController.xib in Resources */,
+				F96662E4225113E4008850A4 /* AddEventViewController.xib in Resources */,
+				F96662B722511167008850A4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F96662BE22511168008850A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F96662C922511168008850A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F96662A822511166008850A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F96662EB225126AC008850A4 /* EventServices.swift in Sources */,
+				F96662B022511166008850A4 /* AppDelegate.swift in Sources */,
+				F96662E3225113E4008850A4 /* AddEventViewController.swift in Sources */,
+				F96662DF22511208008850A4 /* EventViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F96662BC22511168008850A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F96662C522511168008850A4 /* bloomIOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F96662C722511168008850A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F96662D022511168008850A4 /* bloomIOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F96662C222511168008850A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F96662AB22511166008850A4 /* bloomIOS */;
+			targetProxy = F96662C122511168008850A4 /* PBXContainerItemProxy */;
+		};
+		F96662CD22511168008850A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F96662AB22511166008850A4 /* bloomIOS */;
+			targetProxy = F96662CC22511168008850A4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F96662B822511167008850A4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F96662B922511167008850A4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F96662D222511168008850A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F96662D322511168008850A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F96662D522511168008850A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = bloomIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tristan.bloomIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F96662D622511168008850A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = bloomIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tristan.bloomIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F96662D822511168008850A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = bloomIOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tristan.bloomIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bloomIOS.app/bloomIOS";
+			};
+			name = Debug;
+		};
+		F96662D922511168008850A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = bloomIOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tristan.bloomIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bloomIOS.app/bloomIOS";
+			};
+			name = Release;
+		};
+		F96662DB22511168008850A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = bloomIOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tristan.bloomIOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = bloomIOS;
+			};
+			name = Debug;
+		};
+		F96662DC22511168008850A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = bloomIOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tristan.bloomIOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = bloomIOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F96662A722511166008850A4 /* Build configuration list for PBXProject "bloomIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F96662D222511168008850A4 /* Debug */,
+				F96662D322511168008850A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F96662D422511168008850A4 /* Build configuration list for PBXNativeTarget "bloomIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F96662D522511168008850A4 /* Debug */,
+				F96662D622511168008850A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F96662D722511168008850A4 /* Build configuration list for PBXNativeTarget "bloomIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F96662D822511168008850A4 /* Debug */,
+				F96662D922511168008850A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F96662DA22511168008850A4 /* Build configuration list for PBXNativeTarget "bloomIOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F96662DB22511168008850A4 /* Debug */,
+				F96662DC22511168008850A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F96662A422511166008850A4 /* Project object */;
+}
