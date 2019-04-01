@@ -6,6 +6,7 @@
 //  Copyright © 2019 Tristan Luong. All rights reserved.
 //
 
+import Alamofire
 
 public class EventServices {
     
@@ -13,10 +14,18 @@ public class EventServices {
     
 
     public func getEvents(completion: @escaping ([String: Any]) -> Void) {
-        Alamofire.request("http://localhost/events").responseJSON { (res) in
+        Alamofire.request("http://localhost:3000/events").responseJSON { (res) in
             
             print(res)
         }
+    }
+    
+    public func putEvents(event: Event){
+            
+        Alamofire.request("http://localhost:3000/events", method: .put, parameters: event.toJSON(), encoding: JSONEncoding.default).responseJSON { res in
+            
+        }
+        
     }
     
     /**

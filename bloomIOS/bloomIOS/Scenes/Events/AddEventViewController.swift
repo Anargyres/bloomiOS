@@ -14,7 +14,7 @@ class AddEventViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UITextView!
     @IBOutlet weak var latitudeLabel: UITextField!
     @IBOutlet weak var longitudeLabel: UITextField!
-    @IBOutlet weak var promotionalCode: UITextField!
+    @IBOutlet weak var promotionalCodeLabel: UITextField!
     
     
     class func newInstance() -> AddEventViewController{
@@ -33,18 +33,18 @@ class AddEventViewController: UIViewController {
 
     @IBAction func createButton(_ sender: UIButton) {
         
+        guard
+        let title = self.titleLabel.text,
+        let description = self.descriptionLabel.text,
+        let latitude = self.latitudeLabel.text,
+        let longitude = self.longitudeLabel.text,
+        let promotionalCode = self.promotionalCodeLabel.text
+        else {
+            return
+        }
         
+        let event = Event(title: title, description: description, latitude: latitude, longitude: longitude, promotionalCode: promotionalCode)
+        EventServices.default.putEvents(event: event)
         
-        print("test")
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

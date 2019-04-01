@@ -15,7 +15,7 @@
                 <outlet property="descriptionLabel" destination="Dym-4V-gh9" id="O6a-oU-ewk"/>
                 <outlet property="latitudeLabel" destination="XMZ-Ri-qfp" id="sVi-Mo-Rzk"/>
                 <outlet property="longitudeLabel" destination="TDG-l5-HUN" id="SHu-XB-d6L"/>
-                <outlet property="promotionalCode" destination="QaQ-Qg-Clb" id="Tco-pu-sac"/>
+                <outlet property="promotionalCodeLabel" destination="Atg-Um-R7G" id="9Xz-bz-qVm"/>
                 <outlet property="titleLabel" destination="tTl-YX-Ijr" id="oZX-iH-Urv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -34,6 +34,12 @@
                     <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="13"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PROMOTIONAL CODE" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Atg-Um-R7G">
+                    <rect key="frame" x="16" y="533" width="343" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="13"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Click to edit ..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Dym-4V-gh9">
                     <rect key="frame" x="16" y="311" width="343" height="128"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -46,12 +52,6 @@
                     <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="13"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PROMOTIONAL CODE" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QaQ-Qg-Clb">
-                    <rect key="frame" x="16" y="513" width="343" height="30"/>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="13"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81R-hn-t5k">
                     <rect key="frame" x="164" y="624" width="47" height="30"/>
                     <state key="normal" title="Create"/>
@@ -60,7 +60,7 @@
                     </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LATITUDE" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XMZ-Ri-qfp">
-                    <rect key="frame" x="10" y="457" width="84.5" height="30"/>
+                    <rect key="frame" x="16" y="457" width="84.5" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="13"/>
                     <textInputTraits key="textInputTraits"/>
@@ -68,21 +68,21 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QaQ-Qg-Clb" secondAttribute="trailing" constant="16" id="2dN-XS-v4q"/>
                 <constraint firstItem="81R-hn-t5k" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="164" id="7Gy-nW-wml"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="QaQ-Qg-Clb" secondAttribute="bottom" constant="124" id="FZ6-3T-2CH"/>
+                <constraint firstItem="XMZ-Ri-qfp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="7wb-Ky-mvK"/>
+                <constraint firstItem="Atg-Um-R7G" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="81a-wg-0le"/>
+                <constraint firstItem="81R-hn-t5k" firstAttribute="top" secondItem="Atg-Um-R7G" secondAttribute="bottom" constant="61" id="8HD-dp-sG2"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="35R-aR-gES" secondAttribute="bottom" constant="426" id="FsI-tw-tYP"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Dym-4V-gh9" secondAttribute="trailing" constant="16" id="Oyd-Pi-La3"/>
                 <constraint firstItem="35R-aR-gES" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="QGj-Mk-5af"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="TDG-l5-HUN" secondAttribute="bottom" constant="180" id="VQW-o7-69Z"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="XMZ-Ri-qfp" secondAttribute="bottom" constant="180" id="X0d-JQ-J3W"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Atg-Um-R7G" secondAttribute="trailing" constant="16" id="bdL-pP-zcc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="35R-aR-gES" secondAttribute="trailing" constant="16" id="ca3-uv-DyE"/>
                 <constraint firstItem="tTl-YX-Ijr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="cyd-fy-l45"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="81R-hn-t5k" secondAttribute="trailing" constant="164" id="dgN-et-6ib"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tTl-YX-Ijr" secondAttribute="trailing" constant="16" id="n2u-Pg-Obu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TDG-l5-HUN" secondAttribute="trailing" constant="16" id="nRo-FH-DhE"/>
-                <constraint firstItem="XMZ-Ri-qfp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="o8p-Yo-hTX"/>
-                <constraint firstItem="QaQ-Qg-Clb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="pXQ-p8-Yzl"/>
                 <constraint firstItem="Dym-4V-gh9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="sdG-fj-DxU"/>
                 <constraint firstItem="tTl-YX-Ijr" firstAttribute="top" secondItem="35R-aR-gES" secondAttribute="bottom" constant="25" id="uGJ-wk-s0N"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="81R-hn-t5k" secondAttribute="bottom" constant="13" id="utC-an-YAb"/>

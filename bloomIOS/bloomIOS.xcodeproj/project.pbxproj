@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B9B1AD04BA5220CAA61D75D /* Pods_bloomIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D113A0166163C1CC7EDFAB4 /* Pods_bloomIOSUITests.framework */; };
+		966FB86F0C2252B3510A42D5 /* Pods_bloomIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4DFA0B9451043D6E9D43845 /* Pods_bloomIOSTests.framework */; };
+		D55A10888C6EE8E4A4317AAF /* Pods_bloomIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FE351908E06EC756524A6F /* Pods_bloomIOS.framework */; };
 		F96662B022511166008850A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96662AF22511166008850A4 /* AppDelegate.swift */; };
 		F96662B722511167008850A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F96662B622511167008850A4 /* Assets.xcassets */; };
 		F96662BA22511167008850A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F96662B822511167008850A4 /* LaunchScreen.storyboard */; };
@@ -17,6 +20,7 @@
 		F96662E4225113E4008850A4 /* AddEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96662E2225113E4008850A4 /* AddEventViewController.xib */; };
 		F96662E62251198D008850A4 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96662E52251198D008850A4 /* EventViewController.xib */; };
 		F96662EB225126AC008850A4 /* EventServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96662EA225126AC008850A4 /* EventServices.swift */; };
+		F96662EE22512F87008850A4 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96662ED22512F87008850A4 /* Event.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22686364C0ACC360985FC8B1 /* Pods-bloomIOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bloomIOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-bloomIOSUITests/Pods-bloomIOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		37FE351908E06EC756524A6F /* Pods_bloomIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bloomIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43309D01AE120CF2C48E128F /* Pods-bloomIOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bloomIOSTests.release.xcconfig"; path = "Target Support Files/Pods-bloomIOSTests/Pods-bloomIOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		5651001B1370A48754BF0116 /* Pods-bloomIOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bloomIOSUITests.release.xcconfig"; path = "Target Support Files/Pods-bloomIOSUITests/Pods-bloomIOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5D113A0166163C1CC7EDFAB4 /* Pods_bloomIOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bloomIOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C85F92A11298B4B1B19FF03 /* Pods-bloomIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bloomIOSTests.debug.xcconfig"; path = "Target Support Files/Pods-bloomIOSTests/Pods-bloomIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C4DFA0B9451043D6E9D43845 /* Pods_bloomIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bloomIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D949A88E316A3F74E226E10E /* Pods-bloomIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bloomIOS.debug.xcconfig"; path = "Target Support Files/Pods-bloomIOS/Pods-bloomIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		F543821B819254DD3D384A42 /* Pods-bloomIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bloomIOS.release.xcconfig"; path = "Target Support Files/Pods-bloomIOS/Pods-bloomIOS.release.xcconfig"; sourceTree = "<group>"; };
 		F96662AC22511166008850A4 /* bloomIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bloomIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F96662AF22511166008850A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F96662B622511167008850A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +66,7 @@
 		F96662E2225113E4008850A4 /* AddEventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddEventViewController.xib; sourceTree = "<group>"; };
 		F96662E52251198D008850A4 /* EventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventViewController.xib; sourceTree = "<group>"; };
 		F96662EA225126AC008850A4 /* EventServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventServices.swift; sourceTree = "<group>"; };
+		F96662ED22512F87008850A4 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D55A10888C6EE8E4A4317AAF /* Pods_bloomIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				966FB86F0C2252B3510A42D5 /* Pods_bloomIOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +90,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B9B1AD04BA5220CAA61D75D /* Pods_bloomIOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40196AD02A10EC3D20E913FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37FE351908E06EC756524A6F /* Pods_bloomIOS.framework */,
+				C4DFA0B9451043D6E9D43845 /* Pods_bloomIOSTests.framework */,
+				5D113A0166163C1CC7EDFAB4 /* Pods_bloomIOSUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F67A496A59988280141EAF10 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D949A88E316A3F74E226E10E /* Pods-bloomIOS.debug.xcconfig */,
+				F543821B819254DD3D384A42 /* Pods-bloomIOS.release.xcconfig */,
+				9C85F92A11298B4B1B19FF03 /* Pods-bloomIOSTests.debug.xcconfig */,
+				43309D01AE120CF2C48E128F /* Pods-bloomIOSTests.release.xcconfig */,
+				22686364C0ACC360985FC8B1 /* Pods-bloomIOSUITests.debug.xcconfig */,
+				5651001B1370A48754BF0116 /* Pods-bloomIOSUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F96662A322511166008850A4 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +127,8 @@
 				F96662C322511168008850A4 /* bloomIOSTests */,
 				F96662CE22511168008850A4 /* bloomIOSUITests */,
 				F96662AD22511166008850A4 /* Products */,
+				F67A496A59988280141EAF10 /* Pods */,
+				40196AD02A10EC3D20E913FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +145,7 @@
 		F96662AE22511166008850A4 /* bloomIOS */ = {
 			isa = PBXGroup;
 			children = (
+				F96662EC22512F77008850A4 /* Models */,
 				F96662E822512682008850A4 /* Scenes */,
 				F96662E72251267A008850A4 /* Services */,
 				F96662AF22511166008850A4 /* AppDelegate.swift */,
@@ -158,6 +201,14 @@
 			path = Events;
 			sourceTree = "<group>";
 		};
+		F96662EC22512F77008850A4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F96662ED22512F87008850A4 /* Event.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,9 +216,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F96662D422511168008850A4 /* Build configuration list for PBXNativeTarget "bloomIOS" */;
 			buildPhases = (
+				A9ED22914A16F7E38834C422 /* [CP] Check Pods Manifest.lock */,
 				F96662A822511166008850A4 /* Sources */,
 				F96662A922511166008850A4 /* Frameworks */,
 				F96662AA22511166008850A4 /* Resources */,
+				A903F0BD2E3C2ABB5898D9A4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -182,6 +235,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F96662D722511168008850A4 /* Build configuration list for PBXNativeTarget "bloomIOSTests" */;
 			buildPhases = (
+				A09DB5771E9988029475F060 /* [CP] Check Pods Manifest.lock */,
 				F96662BC22511168008850A4 /* Sources */,
 				F96662BD22511168008850A4 /* Frameworks */,
 				F96662BE22511168008850A4 /* Resources */,
@@ -200,6 +254,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F96662DA22511168008850A4 /* Build configuration list for PBXNativeTarget "bloomIOSUITests" */;
 			buildPhases = (
+				13451311AE7BB50E38E13FBD /* [CP] Check Pods Manifest.lock */,
 				F96662C722511168008850A4 /* Sources */,
 				F96662C822511168008850A4 /* Frameworks */,
 				F96662C922511168008850A4 /* Resources */,
@@ -285,6 +340,97 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13451311AE7BB50E38E13FBD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bloomIOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A09DB5771E9988029475F060 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bloomIOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A903F0BD2E3C2ABB5898D9A4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bloomIOS/Pods-bloomIOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bloomIOS/Pods-bloomIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9ED22914A16F7E38834C422 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bloomIOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F96662A822511166008850A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -294,6 +440,7 @@
 				F96662B022511166008850A4 /* AppDelegate.swift in Sources */,
 				F96662E3225113E4008850A4 /* AddEventViewController.swift in Sources */,
 				F96662DF22511208008850A4 /* EventViewController.swift in Sources */,
+				F96662EE22512F87008850A4 /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +605,7 @@
 		};
 		F96662D522511168008850A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D949A88E316A3F74E226E10E /* Pods-bloomIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -475,6 +623,7 @@
 		};
 		F96662D622511168008850A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F543821B819254DD3D384A42 /* Pods-bloomIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -492,6 +641,7 @@
 		};
 		F96662D822511168008850A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C85F92A11298B4B1B19FF03 /* Pods-bloomIOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +662,7 @@
 		};
 		F96662D922511168008850A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43309D01AE120CF2C48E128F /* Pods-bloomIOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -532,6 +683,7 @@
 		};
 		F96662DB22511168008850A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22686364C0ACC360985FC8B1 /* Pods-bloomIOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -551,6 +703,7 @@
 		};
 		F96662DC22511168008850A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5651001B1370A48754BF0116 /* Pods-bloomIOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
