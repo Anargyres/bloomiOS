@@ -20,32 +20,43 @@ public class EventServices {
         }
     }
     
+    public func serialize(_ value: Any) -> Data? {
+        if JSONSerialization.isValidJSONObject(value) {
+            return try? JSONSerialization.data(withJSONObject: value, options: [])
+        }
+        else {
+            return String(describing: value).data(using: .utf8)
+        }
+    }
+    
     public func putEvents(event: Event){
-            
-        Alamofire.request("http://localhost:3000/events", method: .put, parameters: event.toJSON(), encoding: JSONEncoding.default).responseJSON { res in
-            
+ 
+        let imageData = event.image.jpegData(compressionQuality: 0.2)
+        
+        Alamofire.upload(multipartFormData: { multipartFormData in
+            for (key,value) in event.toJSON() {
+                multipartFormData.append((value as! String).data(using: .utf8)!, withName: key)
+            }
+            multipartFormData.append(imageData!, withName: "fileset",fileName: event.title + ".jpg", mimeType: "image/jpg")
+        }, to:"http://localhost:3000/events")
+        { result in
+            switch result {
+            case .success(let upload, _, _):
+                
+                upload.uploadProgress(closure: { (progress) in
+                    print("Upload Progress: \(progress.fractionCompleted)")
+                })
+                
+                upload.responseJSON { response in
+                    print(response.result.value)
+                }
+                
+            case .failure(let encodingError):
+                print(encodingError)
+            }
         }
         
     }
-    
-    /**
-     guard let url = URL(string: "https://moc-3a-movies.herokuapp.com/") else {
-     return
-     }
-     let task = URLSession.shared.dataTask(with: url) { (data, res, err) in
-     guard let d = data,
-     let json = try? JSONSerialization.jsonObject(with: d, options: .allowFragments),
-     let m = json as? [[String: Any]] else {
-     return
-     }
-     //let movies = m.compactMap { return Movie(json: $0) } // flatMap
-     let movies = m.compactMap({ (elem) -> Movie? in
-     return Movie(json: elem)
-     })
-     completion(movies) // Execute callback / closure
-     }
-     task.resume()
-     */
 }
 
 

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public class Event {
     
@@ -15,13 +16,15 @@ public class Event {
     var latitude: String
     var longitude: String
     var promotionalCode: String
+    var image: UIImage
     
-    init(title: String, description: String, latitude: String, longitude: String, promotionalCode: String) {
+    init(title: String, description: String, latitude: String, longitude: String, promotionalCode: String, image: UIImage) {
         self.title = title
         self.description = description
         self.latitude = latitude
         self.longitude = longitude
         self.promotionalCode = promotionalCode
+        self.image = image
     }
     
     
@@ -31,7 +34,7 @@ public class Event {
             "description": description as Any,
             "latitude": latitude as Any,
             "longitude": longitude as Any,
-            "promotionalCode": promotionalCode as Any
+            "promotionalCode": promotionalCode as Any,
         ]
     }
 }
