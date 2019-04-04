@@ -28,7 +28,7 @@ class AddEventViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = #colorLiteral(red: 0.1121567198, green: 0.1747886778, blue: 0.387154981, alpha: 1)
+        self.view.backgroundColor = #colorLiteral(red: 0.008968460207, green: 0.02003048991, blue: 0.1091370558, alpha: 1)
         self.navigationItem.title = "Create event"
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(AddEventViewController.onClickImageView))
@@ -45,7 +45,6 @@ class AddEventViewController: UIViewController {
 
     }
  
-
     @IBAction func createButton(_ sender: UIButton) {
         
         guard
@@ -61,6 +60,7 @@ class AddEventViewController: UIViewController {
         
         let event = Event(title: title, description: description, latitude: latitude, longitude: longitude, promotionalCode: promotionalCode, UIImage: image, SImage: nil)
         EventServices.default.putEvents(event: event)
+        
         
     }
 }

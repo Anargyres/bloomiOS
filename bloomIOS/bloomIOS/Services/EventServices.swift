@@ -13,13 +13,16 @@ public class EventServices {
     public static let `default` = EventServices()
     
 
-    public func getEvents(completion: @escaping (Event) -> Void) {
+    public func getEvents(completion: @escaping ([Event]) -> Void) {
+        
+        var allEvents = [Event]()
+
         Alamofire.request("http://localhost:3000/events").responseJSON { (res) in
             guard let events = res.result.value as? [[String:Any]]
             else {
                 return
             }
-            
+            let eventsCount = events.count
             events.forEach({ event in
                 guard let title = event["title"] as? String,
                 let description = event["description"] as? String,
@@ -33,7 +36,11 @@ public class EventServices {
                 }
                 let newEvent = Event(title: title, description: description, latitude: latitude, longitude: longitude, promotionalCode: promotionalCode, UIImage: nil, SImage: image)
                 
-                completion(newEvent)
+                allEvents.append(newEvent)
+                print(allEvents.count)
+                if(allEvents.count == eventsCount) {
+                    completion(allEvents)
+                }
             });
 
         }

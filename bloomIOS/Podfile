@@ -8,6 +8,7 @@ target 'bloomIOS' do
   # Pods for bloomIOS
 
   pod 'Alamofire'
+  pod 'AlamofireImage'
 
   target 'bloomIOSTests' do
     inherit! :search_paths
