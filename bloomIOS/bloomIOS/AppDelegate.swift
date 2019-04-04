@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        let eventViewController = EventViewController()
+        let layout = UICollectionViewFlowLayout()
+        let eventViewController = EventViewController(collectionViewLayout: layout)
         let navigationController = UINavigationController(rootViewController: eventViewController)
         
         let w = UIWindow(frame: UIScreen.main.bounds)
