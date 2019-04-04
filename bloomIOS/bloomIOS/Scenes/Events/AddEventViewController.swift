@@ -59,7 +59,7 @@ class AddEventViewController: UIViewController {
             return
         }
         
-        let event = Event(title: title, description: description, latitude: latitude, longitude: longitude, promotionalCode: promotionalCode, image: image)
+        let event = Event(title: title, description: description, latitude: latitude, longitude: longitude, promotionalCode: promotionalCode, UIImage: image, SImage: nil)
         EventServices.default.putEvents(event: event)
         
     }

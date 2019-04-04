@@ -17,6 +17,12 @@ class EventViewController: UIViewController {
         self.navigationItem.title = "Events"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.handleAddEvent))
         self.view.backgroundColor = #colorLiteral(red: 0.1121567198, green: 0.1747886778, blue: 0.387154981, alpha: 1)
+        
+        EventServices.default.getEvents { event in
+            print(event.title)
+        }
+        
+        
     }
     
     @objc func handleAddEvent() {

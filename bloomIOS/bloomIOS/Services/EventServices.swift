@@ -13,25 +13,35 @@ public class EventServices {
     public static let `default` = EventServices()
     
 
-    public func getEvents(completion: @escaping ([String: Any]) -> Void) {
+    public func getEvents(completion: @escaping (Event) -> Void) {
         Alamofire.request("http://localhost:3000/events").responseJSON { (res) in
+            guard let events = res.result.value as? [[String:Any]]
+            else {
+                return
+            }
             
-            print(res)
-        }
-    }
-    
-    public func serialize(_ value: Any) -> Data? {
-        if JSONSerialization.isValidJSONObject(value) {
-            return try? JSONSerialization.data(withJSONObject: value, options: [])
-        }
-        else {
-            return String(describing: value).data(using: .utf8)
+            events.forEach({ event in
+                guard let title = event["title"] as? String,
+                let description = event["description"] as? String,
+                let image = event["image"] as? String,
+                let promotionalCode = event["promotionalCode"] as? String,
+                let coord = event["coord"] as? [String: Any],
+                let latitude = coord["latitude"] as? String,
+                let longitude = coord["longitude"] as? String
+                else {
+                    return
+                }
+                let newEvent = Event(title: title, description: description, latitude: latitude, longitude: longitude, promotionalCode: promotionalCode, UIImage: nil, SImage: image)
+                
+                completion(newEvent)
+            });
+
         }
     }
     
     public func putEvents(event: Event){
  
-        let imageData = event.image.jpegData(compressionQuality: 0.2)
+        let imageData = event.UIImage?.jpegData(compressionQuality: 0.2)
         
         Alamofire.upload(multipartFormData: { multipartFormData in
             for (key,value) in event.toJSON() {

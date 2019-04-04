@@ -16,17 +16,22 @@ public class Event {
     var latitude: String
     var longitude: String
     var promotionalCode: String
-    var image: UIImage
+    var UIImage: UIImage?
+    var SImage: String?
     
-    init(title: String, description: String, latitude: String, longitude: String, promotionalCode: String, image: UIImage) {
+    init(title: String, description: String, latitude: String, longitude: String, promotionalCode: String, UIImage: UIImage?, SImage: String?) {
         self.title = title
         self.description = description
         self.latitude = latitude
         self.longitude = longitude
         self.promotionalCode = promotionalCode
-        self.image = image
+        self.UIImage = UIImage
+        self.SImage = SImage
     }
     
+    func setStringImage(imageName: String){
+        self.SImage = imageName
+    }
     
     func toJSON() -> [String: Any] {
         return [
