@@ -12,6 +12,8 @@
 		D55A10888C6EE8E4A4317AAF /* Pods_bloomIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FE351908E06EC756524A6F /* Pods_bloomIOS.framework */; };
 		F92C9793225675500077B7CE /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92C97912256754F0077B7CE /* EventCollectionViewCell.swift */; };
 		F92C9794225675500077B7CE /* EventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92C9792225675500077B7CE /* EventCollectionViewCell.xib */; };
+		F92C97992256AD0A0077B7CE /* DetailEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92C97972256AD0A0077B7CE /* DetailEventViewController.swift */; };
+		F92C979A2256AD0A0077B7CE /* DetailEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92C97982256AD0A0077B7CE /* DetailEventViewController.xib */; };
 		F96662B022511166008850A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96662AF22511166008850A4 /* AppDelegate.swift */; };
 		F96662B722511167008850A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F96662B622511167008850A4 /* Assets.xcassets */; };
 		F96662BA22511167008850A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F96662B822511167008850A4 /* LaunchScreen.storyboard */; };
@@ -54,6 +56,8 @@
 		F543821B819254DD3D384A42 /* Pods-bloomIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bloomIOS.release.xcconfig"; path = "Target Support Files/Pods-bloomIOS/Pods-bloomIOS.release.xcconfig"; sourceTree = "<group>"; };
 		F92C97912256754F0077B7CE /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
 		F92C9792225675500077B7CE /* EventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCollectionViewCell.xib; sourceTree = "<group>"; };
+		F92C97972256AD0A0077B7CE /* DetailEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEventViewController.swift; sourceTree = "<group>"; };
+		F92C97982256AD0A0077B7CE /* DetailEventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailEventViewController.xib; sourceTree = "<group>"; };
 		F96662AC22511166008850A4 /* bloomIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bloomIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F96662AF22511166008850A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F96662B622511167008850A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -203,6 +207,8 @@
 				F96662E2225113E4008850A4 /* AddEventViewController.xib */,
 				F92C97912256754F0077B7CE /* EventCollectionViewCell.swift */,
 				F92C9792225675500077B7CE /* EventCollectionViewCell.xib */,
+				F92C97972256AD0A0077B7CE /* DetailEventViewController.swift */,
+				F92C97982256AD0A0077B7CE /* DetailEventViewController.xib */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -323,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F92C979A2256AD0A0077B7CE /* DetailEventViewController.xib in Resources */,
 				F96662BA22511167008850A4 /* LaunchScreen.storyboard in Resources */,
 				F96662E62251198D008850A4 /* EventViewController.xib in Resources */,
 				F96662E4225113E4008850A4 /* AddEventViewController.xib in Resources */,
@@ -448,6 +455,7 @@
 				F96662EB225126AC008850A4 /* EventServices.swift in Sources */,
 				F92C9793225675500077B7CE /* EventCollectionViewCell.swift in Sources */,
 				F96662B022511166008850A4 /* AppDelegate.swift in Sources */,
+				F92C97992256AD0A0077B7CE /* DetailEventViewController.swift in Sources */,
 				F96662E3225113E4008850A4 /* AddEventViewController.swift in Sources */,
 				F96662DF22511208008850A4 /* EventViewController.swift in Sources */,
 				F96662EE22512F87008850A4 /* Event.swift in Sources */,

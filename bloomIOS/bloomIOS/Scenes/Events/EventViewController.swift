@@ -15,6 +15,12 @@ class EventViewController: UICollectionViewController, UICollectionViewDelegateF
     var events: [Event]!
     let cellIdentifier = "cellIdentifier"
     
+    class func newInstance(events: [Event]) -> EventViewController{
+        let evc = EventViewController()
+        evc.events = events
+        return evc
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,12 +59,11 @@ class EventViewController: UICollectionViewController, UICollectionViewDelegateF
         
         
         Alamofire.request(requestUrl, method: .get)
-            .validate()
             .responseData(completionHandler: { (responseData) in
                 cell.imageCollectionView.image = UIImage(data: responseData.data!)
             })
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(EventViewController.onClickItemCollection))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(EventViewController.onClickItemCollection(sender:)))
         cell.addGestureRecognizer(tap)
         cell.isUserInteractionEnabled = true
 
@@ -87,8 +92,12 @@ class EventViewController: UICollectionViewController, UICollectionViewDelegateF
         self.navigationController?.pushViewController(next, animated: true)
     }
     
-    @objc func onClickItemCollection(){
-        print("test")
+    @objc func onClickItemCollection(sender: UITapGestureRecognizer){
+        
+        if let cell = sender.view, let indexPath = self.collectionView.indexPath(for: cell as! UICollectionViewCell) {
+            let next = DetailEventViewController.newInstance(event: self.events[indexPath.row])
+            self.navigationController?.pushViewController(next, animated: true)
+        }
     }
 
 }
