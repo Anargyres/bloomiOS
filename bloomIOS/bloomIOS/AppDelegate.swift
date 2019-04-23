@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let layout = UICollectionViewFlowLayout()
             let eventViewController = EventViewController(collectionViewLayout: layout)
             eventViewController.events = events
+            
             let navigationController = UINavigationController(rootViewController: eventViewController)
             
             let w = UIWindow(frame: UIScreen.main.bounds)

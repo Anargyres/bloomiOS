@@ -28,14 +28,23 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3RX-m5-pEQ">
+                        <rect key="frame" x="102" y="15" width="133" height="128"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                        <size key="titleShadowOffset" width="18" height="33"/>
+                        <state key="normal" title="REMOVE" image="trash"/>
+                    </button>
                 </subviews>
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="s6s-d3-j8f" secondAttribute="trailing" constant="104" id="F6h-7F-t7q"/>
+                <constraint firstAttribute="trailing" secondItem="3RX-m5-pEQ" secondAttribute="trailing" constant="15" id="H3G-ez-P8X"/>
                 <constraint firstItem="aBH-mb-Q16" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ka8-R3-d0H"/>
                 <constraint firstItem="s6s-d3-j8f" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="104" id="Ofb-zu-OR7"/>
                 <constraint firstItem="aBH-mb-Q16" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Rc6-xR-e2H"/>
+                <constraint firstItem="3RX-m5-pEQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="a6z-ew-ehL"/>
                 <constraint firstItem="s6s-d3-j8f" firstAttribute="top" secondItem="aBH-mb-Q16" secondAttribute="bottom" constant="31" id="dMH-3l-LTz"/>
                 <constraint firstAttribute="bottom" secondItem="s6s-d3-j8f" secondAttribute="bottom" constant="20" id="e8I-PB-div"/>
                 <constraint firstAttribute="trailing" secondItem="aBH-mb-Q16" secondAttribute="trailing" id="vy0-9i-Psv"/>
@@ -49,4 +58,7 @@
             <point key="canvasLocation" x="286.39999999999998" y="225.78710644677662"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="trash" width="128" height="128"/>
+    </resources>
 </document>

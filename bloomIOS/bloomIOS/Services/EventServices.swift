@@ -46,8 +46,8 @@ public class EventServices {
         }
     }
     
-    public func putEvents(event: Event){
- 
+    public func putEvents(event: Event, completion: @escaping (String) -> Void) {
+
         let imageData = event.UIImage?.jpegData(compressionQuality: 0.2)
         
         Alamofire.upload(multipartFormData: { multipartFormData in
@@ -59,13 +59,13 @@ public class EventServices {
         { result in
             switch result {
             case .success(let upload, _, _):
-                
-                upload.uploadProgress(closure: { (progress) in
-                    print("Upload Progress: \(progress.fractionCompleted)")
-                })
-                
                 upload.responseJSON { response in
-                    print(response.result.value)
+                    guard let json = response.result.value as? [String: Any],
+                    let id = json["id"] as? String
+                    else {
+                        return
+                    }
+                    completion(id)
                 }
                 
             case .failure(let encodingError):

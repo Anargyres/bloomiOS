@@ -29,19 +29,34 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JXd-Tu-lDX" userLabel="backgroundView">
                     <rect key="frame" x="20" y="44" width="1154" height="770"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LONGITUDE" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TDG-l5-HUN">
+                            <rect key="frame" x="30" y="612" width="1094" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="13"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PROMOTIONAL CODE" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Atg-Um-R7G">
+                            <rect key="frame" x="30" y="664" width="1094" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="13"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
                     <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Atg-Um-R7G" firstAttribute="top" secondItem="TDG-l5-HUN" secondAttribute="bottom" constant="22" id="GfV-yW-1G0"/>
+                        <constraint firstAttribute="trailing" secondItem="TDG-l5-HUN" secondAttribute="trailing" constant="30" id="coj-vd-kVK"/>
+                        <constraint firstItem="TDG-l5-HUN" firstAttribute="leading" secondItem="JXd-Tu-lDX" secondAttribute="leading" constant="30" id="lFu-87-mAa"/>
+                        <constraint firstAttribute="trailing" secondItem="Atg-Um-R7G" secondAttribute="trailing" constant="30" id="lrw-H9-Lnt"/>
+                        <constraint firstItem="Atg-Um-R7G" firstAttribute="leading" secondItem="JXd-Tu-lDX" secondAttribute="leading" constant="30" id="qxr-bI-1pa"/>
+                    </constraints>
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addImage" translatesAutoresizingMaskIntoConstraints="NO" id="35R-aR-gES">
                     <rect key="frame" x="50" y="54" width="1094" height="334"/>
                 </imageView>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TITLE" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tTl-YX-Ijr">
                     <rect key="frame" x="50" y="413" width="1094" height="30"/>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="13"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PROMOTIONAL CODE" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Atg-Um-R7G">
-                    <rect key="frame" x="50" y="680" width="1094" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="13"/>
                     <textInputTraits key="textInputTraits"/>
@@ -53,16 +68,10 @@
                     <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LONGITUDE" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TDG-l5-HUN">
-                    <rect key="frame" x="1048.5" y="604" width="95.5" height="30"/>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="13"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81R-hn-t5k">
                     <rect key="frame" x="50" y="771" width="1094" height="30"/>
                     <color key="backgroundColor" red="0.023529411764705882" green="0.039215686274509803" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <state key="normal" title="Create">
+                    <state key="normal" title="Next">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
@@ -70,7 +79,7 @@
                     </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LATITUDE" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XMZ-Ri-qfp">
-                    <rect key="frame" x="50" y="604" width="84.5" height="30"/>
+                    <rect key="frame" x="50" y="601" width="1094" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="13"/>
                     <textInputTraits key="textInputTraits"/>
@@ -78,25 +87,22 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="XMZ-Ri-qfp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="7wb-Ky-mvK"/>
-                <constraint firstItem="Atg-Um-R7G" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="81a-wg-0le"/>
-                <constraint firstItem="81R-hn-t5k" firstAttribute="top" secondItem="Atg-Um-R7G" secondAttribute="bottom" constant="61" id="8HD-dp-sG2"/>
+                <constraint firstItem="XMZ-Ri-qfp" firstAttribute="top" secondItem="Dym-4V-gh9" secondAttribute="bottom" constant="15" id="6gJ-vo-9gY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="35R-aR-gES" secondAttribute="bottom" constant="426" id="FsI-tw-tYP"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="81R-hn-t5k" secondAttribute="trailing" constant="50" id="H1a-9r-s6O"/>
                 <constraint firstItem="JXd-Tu-lDX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Ive-Na-zyw"/>
                 <constraint firstItem="81R-hn-t5k" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="JWx-J7-Tbb"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Dym-4V-gh9" secondAttribute="trailing" constant="50" id="Oyd-Pi-La3"/>
                 <constraint firstItem="35R-aR-gES" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="QGj-Mk-5af"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="TDG-l5-HUN" secondAttribute="bottom" constant="180" id="VQW-o7-69Z"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="XMZ-Ri-qfp" secondAttribute="bottom" constant="180" id="X0d-JQ-J3W"/>
+                <constraint firstItem="TDG-l5-HUN" firstAttribute="top" secondItem="XMZ-Ri-qfp" secondAttribute="bottom" constant="25" id="QbV-Vv-xWf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JXd-Tu-lDX" secondAttribute="trailing" constant="20" id="Z5y-yT-s3g"/>
                 <constraint firstItem="JXd-Tu-lDX" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="axh-LB-5Ot"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Atg-Um-R7G" secondAttribute="trailing" constant="50" id="bdL-pP-zcc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="35R-aR-gES" secondAttribute="trailing" constant="50" id="ca3-uv-DyE"/>
                 <constraint firstItem="tTl-YX-Ijr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="cyd-fy-l45"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XMZ-Ri-qfp" secondAttribute="trailing" constant="50" id="dbw-Kr-7rL"/>
                 <constraint firstItem="JXd-Tu-lDX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="evt-bk-xgx"/>
+                <constraint firstItem="XMZ-Ri-qfp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="hC3-Uz-MXh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tTl-YX-Ijr" secondAttribute="trailing" constant="50" id="n2u-Pg-Obu"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TDG-l5-HUN" secondAttribute="trailing" constant="50" id="nRo-FH-DhE"/>
                 <constraint firstItem="Dym-4V-gh9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="sdG-fj-DxU"/>
                 <constraint firstItem="tTl-YX-Ijr" firstAttribute="top" secondItem="35R-aR-gES" secondAttribute="bottom" constant="25" id="uGJ-wk-s0N"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="81R-hn-t5k" secondAttribute="bottom" constant="13" id="utC-an-YAb"/>

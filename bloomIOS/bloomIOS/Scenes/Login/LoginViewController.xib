@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad11_0rounded" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="bloomIOS" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hzl-ly-xAr" userLabel="backgroundView">
+                    <rect key="frame" x="20" y="24" width="794" height="1150"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HUF-Lc-f45">
+                            <rect key="frame" x="47" y="450" width="700" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rKo-G3-iWt">
+                            <rect key="frame" x="47" y="550" width="700" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ha-Qb-KGE">
+                            <rect key="frame" x="47" y="520" width="70" height="22"/>
+                            <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xci-nU-BMy">
+                            <rect key="frame" x="47" y="620" width="700" height="30"/>
+                            <color key="backgroundColor" red="1" green="0.14079212079847447" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Button"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not yet registered ? " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZd-cM-Zlo">
+                            <rect key="frame" x="47" y="677" width="700" height="22"/>
+                            <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="17"/>
+                            <color key="textColor" red="0.22150614790000001" green="0.36958658490000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLu-0F-fYL">
+                            <rect key="frame" x="47" y="420" width="41" height="22"/>
+                            <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="rKo-G3-iWt" secondAttribute="trailing" constant="47" id="7Uz-an-KID"/>
+                        <constraint firstItem="RZd-cM-Zlo" firstAttribute="top" secondItem="xci-nU-BMy" secondAttribute="bottom" constant="27" id="B2p-d5-lmR"/>
+                        <constraint firstAttribute="trailing" secondItem="HUF-Lc-f45" secondAttribute="trailing" constant="47" id="B6r-Z4-HNP"/>
+                        <constraint firstAttribute="trailing" secondItem="xci-nU-BMy" secondAttribute="trailing" constant="47" id="E5L-Lm-H27"/>
+                        <constraint firstItem="HUF-Lc-f45" firstAttribute="leading" secondItem="hzl-ly-xAr" secondAttribute="leading" constant="47" id="F5g-eY-7Hq"/>
+                        <constraint firstItem="DLu-0F-fYL" firstAttribute="leading" secondItem="hzl-ly-xAr" secondAttribute="leading" constant="47" id="LW3-kt-PsO"/>
+                        <constraint firstItem="rKo-G3-iWt" firstAttribute="top" secondItem="7ha-Qb-KGE" secondAttribute="bottom" constant="8" id="TED-tJ-g1a"/>
+                        <constraint firstItem="rKo-G3-iWt" firstAttribute="leading" secondItem="hzl-ly-xAr" secondAttribute="leading" constant="47" id="ZS4-Fu-RKF"/>
+                        <constraint firstItem="DLu-0F-fYL" firstAttribute="top" secondItem="hzl-ly-xAr" secondAttribute="top" constant="420" id="b1z-ab-eq9"/>
+                        <constraint firstAttribute="trailing" secondItem="7ha-Qb-KGE" secondAttribute="trailing" constant="677" id="dIG-aT-rco"/>
+                        <constraint firstItem="xci-nU-BMy" firstAttribute="leading" secondItem="hzl-ly-xAr" secondAttribute="leading" constant="47" id="ebB-As-rlk"/>
+                        <constraint firstAttribute="trailing" secondItem="DLu-0F-fYL" secondAttribute="trailing" constant="706" id="mz1-W2-wuC"/>
+                        <constraint firstAttribute="trailing" secondItem="RZd-cM-Zlo" secondAttribute="trailing" constant="47" id="oKB-hl-0vD"/>
+                        <constraint firstItem="7ha-Qb-KGE" firstAttribute="leading" secondItem="hzl-ly-xAr" secondAttribute="leading" constant="47" id="pNs-ag-4Mr"/>
+                        <constraint firstItem="7ha-Qb-KGE" firstAttribute="top" secondItem="HUF-Lc-f45" secondAttribute="bottom" constant="40" id="rHN-fw-qyj"/>
+                        <constraint firstItem="HUF-Lc-f45" firstAttribute="top" secondItem="hzl-ly-xAr" secondAttribute="top" constant="450" id="uJU-O4-h8C"/>
+                        <constraint firstItem="xci-nU-BMy" firstAttribute="top" secondItem="rKo-G3-iWt" secondAttribute="bottom" constant="40" id="vJj-N4-ydE"/>
+                        <constraint firstItem="RZd-cM-Zlo" firstAttribute="leading" secondItem="hzl-ly-xAr" secondAttribute="leading" constant="47" id="yaq-u5-4Cp"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hzl-ly-xAr" secondAttribute="trailing" constant="20" id="9zt-sL-a10"/>
+                <constraint firstItem="hzl-ly-xAr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="AsJ-Zx-zyZ"/>
+                <constraint firstItem="hzl-ly-xAr" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="D3T-JA-BmF"/>
+                <constraint firstItem="hzl-ly-xAr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="lxg-wA-sS4"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="23.741007194244606" y="35.678391959798994"/>
+        </view>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PyV-AA-KsP">
+            <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <state key="normal" title="Button"/>
+        </button>
+    </objects>
+</document>

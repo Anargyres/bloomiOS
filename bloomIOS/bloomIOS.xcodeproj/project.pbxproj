@@ -14,6 +14,10 @@
 		F92C9794225675500077B7CE /* EventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92C9792225675500077B7CE /* EventCollectionViewCell.xib */; };
 		F92C97992256AD0A0077B7CE /* DetailEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92C97972256AD0A0077B7CE /* DetailEventViewController.swift */; };
 		F92C979A2256AD0A0077B7CE /* DetailEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92C97982256AD0A0077B7CE /* DetailEventViewController.xib */; };
+		F953A424225F34C400713022 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953A422225F34C400713022 /* LoginViewController.swift */; };
+		F953A425225F34C400713022 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F953A423225F34C400713022 /* LoginViewController.xib */; };
+		F953A429225F3FE900713022 /* AddTicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953A427225F3FE900713022 /* AddTicketsViewController.swift */; };
+		F953A42A225F3FE900713022 /* AddTicketsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F953A428225F3FE900713022 /* AddTicketsViewController.xib */; };
 		F96662B022511166008850A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96662AF22511166008850A4 /* AppDelegate.swift */; };
 		F96662B722511167008850A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F96662B622511167008850A4 /* Assets.xcassets */; };
 		F96662BA22511167008850A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F96662B822511167008850A4 /* LaunchScreen.storyboard */; };
@@ -25,6 +29,11 @@
 		F96662E62251198D008850A4 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96662E52251198D008850A4 /* EventViewController.xib */; };
 		F96662EB225126AC008850A4 /* EventServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96662EA225126AC008850A4 /* EventServices.swift */; };
 		F96662EE22512F87008850A4 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96662ED22512F87008850A4 /* Event.swift */; };
+		F9E3C53122609B1600CFBCB9 /* AddTicketFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E3C52F22609B1600CFBCB9 /* AddTicketFormViewController.swift */; };
+		F9E3C53222609B1600CFBCB9 /* AddTicketFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E3C53022609B1600CFBCB9 /* AddTicketFormViewController.xib */; };
+		F9E3C53522609B8C00CFBCB9 /* TicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E3C53322609B8C00CFBCB9 /* TicketTableViewCell.swift */; };
+		F9E3C53622609B8C00CFBCB9 /* TicketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E3C53422609B8C00CFBCB9 /* TicketTableViewCell.xib */; };
+		F9E3C53822609FB000CFBCB9 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E3C53722609FB000CFBCB9 /* Ticket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +67,10 @@
 		F92C9792225675500077B7CE /* EventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCollectionViewCell.xib; sourceTree = "<group>"; };
 		F92C97972256AD0A0077B7CE /* DetailEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEventViewController.swift; sourceTree = "<group>"; };
 		F92C97982256AD0A0077B7CE /* DetailEventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailEventViewController.xib; sourceTree = "<group>"; };
+		F953A422225F34C400713022 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F953A423225F34C400713022 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		F953A427225F3FE900713022 /* AddTicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTicketsViewController.swift; sourceTree = "<group>"; };
+		F953A428225F3FE900713022 /* AddTicketsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTicketsViewController.xib; sourceTree = "<group>"; };
 		F96662AC22511166008850A4 /* bloomIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bloomIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F96662AF22511166008850A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F96662B622511167008850A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +88,11 @@
 		F96662E52251198D008850A4 /* EventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventViewController.xib; sourceTree = "<group>"; };
 		F96662EA225126AC008850A4 /* EventServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventServices.swift; sourceTree = "<group>"; };
 		F96662ED22512F87008850A4 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		F9E3C52F22609B1600CFBCB9 /* AddTicketFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTicketFormViewController.swift; sourceTree = "<group>"; };
+		F9E3C53022609B1600CFBCB9 /* AddTicketFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTicketFormViewController.xib; sourceTree = "<group>"; };
+		F9E3C53322609B8C00CFBCB9 /* TicketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTableViewCell.swift; sourceTree = "<group>"; };
+		F9E3C53422609B8C00CFBCB9 /* TicketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketTableViewCell.xib; sourceTree = "<group>"; };
+		F9E3C53722609FB000CFBCB9 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +144,28 @@
 				5651001B1370A48754BF0116 /* Pods-bloomIOSUITests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F953A421225F34B700713022 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F953A422225F34C400713022 /* LoginViewController.swift */,
+				F953A423225F34C400713022 /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F953A426225F3FD600713022 /* Tickets */ = {
+			isa = PBXGroup;
+			children = (
+				F953A427225F3FE900713022 /* AddTicketsViewController.swift */,
+				F953A428225F3FE900713022 /* AddTicketsViewController.xib */,
+				F9E3C52F22609B1600CFBCB9 /* AddTicketFormViewController.swift */,
+				F9E3C53022609B1600CFBCB9 /* AddTicketFormViewController.xib */,
+				F9E3C53322609B8C00CFBCB9 /* TicketTableViewCell.swift */,
+				F9E3C53422609B8C00CFBCB9 /* TicketTableViewCell.xib */,
+			);
+			path = Tickets;
 			sourceTree = "<group>";
 		};
 		F96662A322511166008850A4 = {
@@ -193,6 +233,8 @@
 		F96662E822512682008850A4 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F953A426225F3FD600713022 /* Tickets */,
+				F953A421225F34B700713022 /* Login */,
 				F96662E922512698008850A4 /* Events */,
 			);
 			path = Scenes;
@@ -217,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				F96662ED22512F87008850A4 /* Event.swift */,
+				F9E3C53722609FB000CFBCB9 /* Ticket.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -333,7 +376,11 @@
 				F96662BA22511167008850A4 /* LaunchScreen.storyboard in Resources */,
 				F96662E62251198D008850A4 /* EventViewController.xib in Resources */,
 				F96662E4225113E4008850A4 /* AddEventViewController.xib in Resources */,
+				F9E3C53222609B1600CFBCB9 /* AddTicketFormViewController.xib in Resources */,
+				F953A42A225F3FE900713022 /* AddTicketsViewController.xib in Resources */,
 				F96662B722511167008850A4 /* Assets.xcassets in Resources */,
+				F9E3C53622609B8C00CFBCB9 /* TicketTableViewCell.xib in Resources */,
+				F953A425225F34C400713022 /* LoginViewController.xib in Resources */,
 				F92C9794225675500077B7CE /* EventCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,8 +503,13 @@
 				F92C9793225675500077B7CE /* EventCollectionViewCell.swift in Sources */,
 				F96662B022511166008850A4 /* AppDelegate.swift in Sources */,
 				F92C97992256AD0A0077B7CE /* DetailEventViewController.swift in Sources */,
+				F953A424225F34C400713022 /* LoginViewController.swift in Sources */,
 				F96662E3225113E4008850A4 /* AddEventViewController.swift in Sources */,
+				F9E3C53522609B8C00CFBCB9 /* TicketTableViewCell.swift in Sources */,
+				F9E3C53822609FB000CFBCB9 /* Ticket.swift in Sources */,
+				F9E3C53122609B1600CFBCB9 /* AddTicketFormViewController.swift in Sources */,
 				F96662DF22511208008850A4 /* EventViewController.swift in Sources */,
+				F953A429225F3FE900713022 /* AddTicketsViewController.swift in Sources */,
 				F96662EE22512F87008850A4 /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

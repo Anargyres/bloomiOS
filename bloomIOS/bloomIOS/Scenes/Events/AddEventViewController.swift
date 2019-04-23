@@ -65,17 +65,11 @@ class AddEventViewController: UIViewController {
         if(verifForm() == false){
         
             let event = Event(title: title, description: description, latitude: latitude, longitude: longitude, promotionalCode: promotionalCode, UIImage: image, SImage: nil)
-            EventServices.default.putEvents(event: event)
+            EventServices.default.putEvents(event: event, completion: { res in
+                let next = AddTicketsViewController.newInstance(eventID: res)
+                self.navigationController?.pushViewController(next, animated: true)
+            })
             
-            EventServices.default.getEvents { res in
-                guard let events = res as? [Event]
-                    else {
-                        return
-                }
-                self.navigationController?.popViewController(animated: true)
-                let previousViewController = self.navigationController?.viewControllers.last as! EventViewController
-                previousViewController.events = events
-            }
 
         }
         
