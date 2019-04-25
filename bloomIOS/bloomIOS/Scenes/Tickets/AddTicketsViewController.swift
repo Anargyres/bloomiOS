@@ -26,8 +26,6 @@ class AddTicketsViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // tickets.append(Ticket(idEvent: "", name: "test", price: 5.0, quantity: 5, isUsed: false))
-
         self.navigationItem.title = "Add tickets"
         self.navigationItem.setHidesBackButton(true, animated:true);
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.handleAddTicket))

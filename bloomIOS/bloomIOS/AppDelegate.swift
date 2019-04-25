@@ -16,12 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+
         EventServices.default.getEvents { res in
-            guard let events = res as? [Event]
-            else {
-                return
-            }
-            
+            print(res)
+            let events = res as? [Event]
             let layout = UICollectionViewFlowLayout()
             let eventViewController = EventViewController(collectionViewLayout: layout)
             eventViewController.events = events
