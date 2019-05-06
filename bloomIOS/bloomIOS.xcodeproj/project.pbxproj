@@ -10,7 +10,6 @@
 		5B9B1AD04BA5220CAA61D75D /* Pods_bloomIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D113A0166163C1CC7EDFAB4 /* Pods_bloomIOSUITests.framework */; };
 		966FB86F0C2252B3510A42D5 /* Pods_bloomIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4DFA0B9451043D6E9D43845 /* Pods_bloomIOSTests.framework */; };
 		D55A10888C6EE8E4A4317AAF /* Pods_bloomIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FE351908E06EC756524A6F /* Pods_bloomIOS.framework */; };
-		F90ED9122271EC8400B082B9 /* kisspng-ticket-computer-icons-raffle-clip-art-5ada225a6f1780.4831654415242450824551.png in Resources */ = {isa = PBXBuildFile; fileRef = F90ED9112271EC8400B082B9 /* kisspng-ticket-computer-icons-raffle-clip-art-5ada225a6f1780.4831654415242450824551.png */; };
 		F90ED9142271F05B00B082B9 /* TicketServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90ED9132271F05B00B082B9 /* TicketServices.swift */; };
 		F92C9793225675500077B7CE /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92C97912256754F0077B7CE /* EventCollectionViewCell.swift */; };
 		F92C9794225675500077B7CE /* EventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92C9792225675500077B7CE /* EventCollectionViewCell.xib */; };
@@ -69,7 +68,6 @@
 		C4DFA0B9451043D6E9D43845 /* Pods_bloomIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bloomIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D949A88E316A3F74E226E10E /* Pods-bloomIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bloomIOS.debug.xcconfig"; path = "Target Support Files/Pods-bloomIOS/Pods-bloomIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F543821B819254DD3D384A42 /* Pods-bloomIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bloomIOS.release.xcconfig"; path = "Target Support Files/Pods-bloomIOS/Pods-bloomIOS.release.xcconfig"; sourceTree = "<group>"; };
-		F90ED9112271EC8400B082B9 /* kisspng-ticket-computer-icons-raffle-clip-art-5ada225a6f1780.4831654415242450824551.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kisspng-ticket-computer-icons-raffle-clip-art-5ada225a6f1780.4831654415242450824551.png"; sourceTree = "<group>"; };
 		F90ED9132271F05B00B082B9 /* TicketServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketServices.swift; sourceTree = "<group>"; };
 		F92C97912256754F0077B7CE /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
 		F92C9792225675500077B7CE /* EventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -212,7 +210,6 @@
 				F96662E72251267A008850A4 /* Services */,
 				F96662AF22511166008850A4 /* AppDelegate.swift */,
 				F96662B622511167008850A4 /* Assets.xcassets */,
-				F90ED9112271EC8400B082B9 /* kisspng-ticket-computer-icons-raffle-clip-art-5ada225a6f1780.4831654415242450824551.png */,
 				F96662B822511167008850A4 /* LaunchScreen.storyboard */,
 				F96662BB22511167008850A4 /* Info.plist */,
 			);
@@ -399,7 +396,6 @@
 				F96662B722511167008850A4 /* Assets.xcassets in Resources */,
 				F9E3C53622609B8C00CFBCB9 /* TicketTableViewCell.xib in Resources */,
 				F953A425225F34C400713022 /* LoginViewController.xib in Resources */,
-				F90ED9122271EC8400B082B9 /* kisspng-ticket-computer-icons-raffle-clip-art-5ada225a6f1780.4831654415242450824551.png in Resources */,
 				F92C9794225675500077B7CE /* EventCollectionViewCell.xib in Resources */,
 				F963D3BD2280241A001EB3B7 /* RegisterViewController.xib in Resources */,
 			);

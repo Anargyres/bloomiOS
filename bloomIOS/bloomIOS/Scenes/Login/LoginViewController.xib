@@ -12,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="bloomIOS" customModuleProvider="target">
             <connections>
+                <outlet property="emailTextField" destination="HUF-Lc-f45" id="VrZ-2h-uue"/>
+                <outlet property="errorLabel" destination="48n-bb-yLz" id="4SS-IW-ozJ"/>
+                <outlet property="passwordTextField" destination="rKo-G3-iWt" id="YKO-21-Z2t"/>
                 <outlet property="registerLabel" destination="RZd-cM-Zlo" id="los-Cz-rZs"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -53,7 +56,7 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not yet registered ? " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZd-cM-Zlo">
-                            <rect key="frame" x="47" y="578.5" width="700" height="22"/>
+                            <rect key="frame" x="47" y="601.5" width="700" height="22"/>
                             <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="17"/>
                             <color key="textColor" red="0.22150614790000001" green="0.36958658490000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -67,23 +70,32 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bloom" translatesAutoresizingMaskIntoConstraints="NO" id="sRZ-hx-Wvd">
                             <rect key="frame" x="47" y="50" width="700" height="250"/>
                         </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48n-bb-yLz">
+                            <rect key="frame" x="47" y="565" width="700" height="20"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" red="1" green="0.1407921208" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="sRZ-hx-Wvd" secondAttribute="trailing" constant="47" id="2fF-Tk-1fx"/>
                         <constraint firstAttribute="trailing" secondItem="rKo-G3-iWt" secondAttribute="trailing" constant="47" id="7Uz-an-KID"/>
-                        <constraint firstItem="RZd-cM-Zlo" firstAttribute="top" secondItem="xci-nU-BMy" secondAttribute="bottom" constant="27" id="B2p-d5-lmR"/>
+                        <constraint firstItem="RZd-cM-Zlo" firstAttribute="top" secondItem="xci-nU-BMy" secondAttribute="bottom" constant="50" id="B2p-d5-lmR"/>
                         <constraint firstAttribute="trailing" secondItem="HUF-Lc-f45" secondAttribute="trailing" constant="47" id="B6r-Z4-HNP"/>
                         <constraint firstAttribute="trailing" secondItem="xci-nU-BMy" secondAttribute="trailing" constant="47" id="E5L-Lm-H27"/>
                         <constraint firstItem="HUF-Lc-f45" firstAttribute="leading" secondItem="hzl-ly-xAr" secondAttribute="leading" constant="47" id="F5g-eY-7Hq"/>
                         <constraint firstItem="DLu-0F-fYL" firstAttribute="leading" secondItem="hzl-ly-xAr" secondAttribute="leading" constant="47" id="LW3-kt-PsO"/>
+                        <constraint firstItem="48n-bb-yLz" firstAttribute="leading" secondItem="hzl-ly-xAr" secondAttribute="leading" constant="47" id="Odh-95-jG3"/>
                         <constraint firstItem="rKo-G3-iWt" firstAttribute="top" secondItem="7ha-Qb-KGE" secondAttribute="bottom" constant="8" id="TED-tJ-g1a"/>
+                        <constraint firstAttribute="trailing" secondItem="48n-bb-yLz" secondAttribute="trailing" constant="47" id="UOm-PK-VIs"/>
                         <constraint firstItem="rKo-G3-iWt" firstAttribute="leading" secondItem="hzl-ly-xAr" secondAttribute="leading" constant="47" id="ZS4-Fu-RKF"/>
                         <constraint firstItem="DLu-0F-fYL" firstAttribute="top" secondItem="hzl-ly-xAr" secondAttribute="top" constant="320" id="b1z-ab-eq9"/>
                         <constraint firstItem="sRZ-hx-Wvd" firstAttribute="top" secondItem="hzl-ly-xAr" secondAttribute="top" constant="50" id="bff-f5-E0H"/>
                         <constraint firstAttribute="trailing" secondItem="7ha-Qb-KGE" secondAttribute="trailing" constant="650" id="dIG-aT-rco"/>
                         <constraint firstItem="sRZ-hx-Wvd" firstAttribute="leading" secondItem="hzl-ly-xAr" secondAttribute="leading" constant="47" id="eH6-i8-OHc"/>
                         <constraint firstItem="xci-nU-BMy" firstAttribute="leading" secondItem="hzl-ly-xAr" secondAttribute="leading" constant="47" id="ebB-As-rlk"/>
+                        <constraint firstItem="48n-bb-yLz" firstAttribute="top" secondItem="xci-nU-BMy" secondAttribute="bottom" constant="13.5" id="kC9-il-edi"/>
                         <constraint firstAttribute="trailing" secondItem="DLu-0F-fYL" secondAttribute="trailing" constant="650" id="mz1-W2-wuC"/>
                         <constraint firstAttribute="trailing" secondItem="RZd-cM-Zlo" secondAttribute="trailing" constant="47" id="oKB-hl-0vD"/>
                         <constraint firstItem="7ha-Qb-KGE" firstAttribute="leading" secondItem="hzl-ly-xAr" secondAttribute="leading" constant="47" id="pNs-ag-4Mr"/>

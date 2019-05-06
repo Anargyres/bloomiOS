@@ -10,12 +10,17 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    var window: UIWindow?
     
+    @IBOutlet var errorLabel: UILabel!
     @IBOutlet var registerLabel: UILabel!
+    @IBOutlet var emailTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.errorLabel.isHidden = true
         self.view.backgroundColor = #colorLiteral(red: 0.008968460207, green: 0.02003048991, blue: 0.1091370558, alpha: 1)
         self.navigationItem.title = "Login"
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.008968460207, green: 0.02003048991, blue: 0.1091370558, alpha: 1)
@@ -29,8 +34,26 @@ class LoginViewController: UIViewController {
 
 
     @IBAction func handleConnectionPress(_ sender: Any) {
-        
-        
+        LoginServices.default.login(email: emailTextField.text!, password: passwordTextField.text!) { res in
+            self.errorLabel.isHidden = false
+            self.errorLabel.text = res
+            
+            if(res == "ok"){
+                EventServices.default.getEvents { res in
+                    let events = res as? [Event]
+                    let layout = UICollectionViewFlowLayout()
+                    let eventViewController = EventViewController(collectionViewLayout: layout)
+                    eventViewController.events = events
+                    
+                    let navigationController = UINavigationController(rootViewController: eventViewController)
+                    
+                    let w = UIWindow(frame: UIScreen.main.bounds)
+                    w.rootViewController = navigationController
+                    w.makeKeyAndVisible()
+                    self.window = w
+                }
+            }
+        }
     }
     
     @objc func handleRegisterPress(){
