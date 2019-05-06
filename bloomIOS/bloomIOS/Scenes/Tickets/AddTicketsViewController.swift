@@ -56,12 +56,17 @@ class AddTicketsViewController: UIViewController, UITableViewDelegate, UITableVi
         next.pressDelegate = self
         self.navigationController?.pushViewController(next, animated: true)
     }
+    
+    @IBAction func handleSubmitEvent(_ sender: Any) {
+        TicketServices.default.putTicket(tickets: tickets)
+        self.navigationController?.popToRootViewController(animated: true)
+    }
 }
 
 
 extension AddTicketsViewController: AddTicketProtocol {
     func addTicket(name: String, quantity: String, price: String) {
-        tickets.append(Ticket(idEvent: eventID, name: name, price: Double(price)!, quantity: Int(quantity)!, isUsed: false))
+        tickets.append(Ticket(idEvent: eventID, name: name, price: Double(price)!, quantity: Int(quantity)!))
         tableView.reloadData()
     }
 }

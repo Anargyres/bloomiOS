@@ -15,30 +15,24 @@ public class Ticket {
     var name: String
     var price: Double
     var quantity: Int
-    var isUsed: Bool
 
-    
-    init(idEvent: String, name: String, price: Double, quantity: Int, isUsed: Bool){
+    init(idEvent: String, name: String, price: Double, quantity: Int){
         self.idEvent =  idEvent
         self.name = name
         self.price = price
         self.quantity = quantity
-        self.isUsed = isUsed
     }
     
     
-    /*
-
     func toJSON() -> [String: Any] {
         return [
-            "title": title as Any,
-            "description": description as Any,
-            "latitude": latitude as Any,
-            "longitude": longitude as Any,
-            "promotionalCode": promotionalCode as Any,
+            "idEvent": idEvent as Any,
+            "name": name as Any,
+            "price": price as Any,
+            "quantity": quantity as Any,
         ]
     }
- */
+
 }
 
 

@@ -42,7 +42,9 @@ public class EventServices {
                     completion(allEvents)
                 }
             });
-            completion([])
+            if(events.count == 0){
+                completion([])
+            }
 
         }
     }
@@ -73,7 +75,33 @@ public class EventServices {
                 print(encodingError)
             }
         }
+    }
+    
+    public func updateEvent(event: Event, title: String){
         
+        let imageData = event.UIImage?.jpegData(compressionQuality: 0.2)
+        
+        Alamofire.upload(multipartFormData: { multipartFormData in
+            for (key,value) in event.toJSON() {
+                multipartFormData.append((value as! String).data(using: .utf8)!, withName: key)
+            }
+            multipartFormData.append(imageData!, withName: "fileset",fileName: event.title + ".jpg", mimeType: "image/jpg")
+        }, to:"http://localhost:3000/events/update/\(title)")
+        { result in
+            switch result {
+            case .success(let upload, _, _):
+                upload.responseJSON { response in
+                    guard let json = response.result.value as? [String: Any],
+                        let id = json["id"] as? String
+                        else {
+                            return
+                    }
+                }
+                    
+            case .failure(let encodingError):
+                print(encodingError)
+            }
+        }
     }
 }
 

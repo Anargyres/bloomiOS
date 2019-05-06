@@ -10,6 +10,9 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    
+    @IBOutlet var registerLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,17 +22,20 @@ class LoginViewController: UIViewController {
         navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
         
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.handleRegisterPress))
+        registerLabel.isUserInteractionEnabled = true
+        registerLabel.addGestureRecognizer(gestureRecognizer)
     }
 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func handleConnectionPress(_ sender: Any) {
+        
+        
     }
-    */
-
+    
+    @objc func handleRegisterPress(){
+        let next = RegisterViewController()
+        self.navigationController?.pushViewController(next, animated: true)
+    }
+    
 }

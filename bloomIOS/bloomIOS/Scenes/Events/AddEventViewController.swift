@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Alamofire
 
 class AddEventViewController: UIViewController {
     
+    var event: Event?
     @IBOutlet var backgroundView: UIView!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var titleLabel: UITextField!
@@ -20,8 +22,9 @@ class AddEventViewController: UIViewController {
     
     var imagePicker = UIImagePickerController()
     
-    class func newInstance() -> AddEventViewController{
+    class func newInstance(event: Event?) -> AddEventViewController{
         let dvc = AddEventViewController()
+        dvc.event = event
         return dvc
     }
 
@@ -30,6 +33,8 @@ class AddEventViewController: UIViewController {
         
         self.view.backgroundColor = #colorLiteral(red: 0.008968460207, green: 0.02003048991, blue: 0.1091370558, alpha: 1)
         self.navigationItem.title = "Create event"
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.handleTicketsPress))
         
         self.descriptionLabel.layer.borderWidth = 1
         self.descriptionLabel.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
@@ -40,6 +45,25 @@ class AddEventViewController: UIViewController {
         imageView.addGestureRecognizer(tap)
         imageView.isUserInteractionEnabled = true
         imagePicker.delegate = self
+        
+        
+        // DetailEventViewController
+        
+        if(event != nil){
+            self.titleLabel.text = event?.title
+            self.descriptionLabel.text = event?.description
+            self.latitudeLabel.text = event?.latitude
+            self.longitudeLabel.text = event?.longitude
+            self.promotionalCodeLabel.text = event?.promotionalCode
+            
+            let requestUrl = "http://localhost:3000/images/\(event?.SImage!)"
+            
+            
+            Alamofire.request(requestUrl, method: .get)
+                .responseData(completionHandler: { (responseData) in
+                    self.imageView.image = UIImage(data: responseData.data!)
+                })
+        }
     }
     
     @objc func onClickImageView(){
@@ -48,9 +72,13 @@ class AddEventViewController: UIViewController {
         present(imagePicker, animated: true, completion: nil)
 
     }
+    
+    @objc func handleTicketsPress() {
+        
+    }
  
     @IBAction func createButton(_ sender: UIButton) {
-        
+
         guard
         let title = self.titleLabel.text,
         let description = self.descriptionLabel.text,
@@ -63,16 +91,18 @@ class AddEventViewController: UIViewController {
         }
         
         if(verifForm() == false){
-        
-            let event = Event(title: title, description: description, latitude: latitude, longitude: longitude, promotionalCode: promotionalCode, UIImage: image, SImage: nil)
-            EventServices.default.putEvents(event: event, completion: { res in
-                let next = AddTicketsViewController.newInstance(eventID: res)
-                self.navigationController?.pushViewController(next, animated: true)
-            })
             
-
+            let newEvent = Event(title: title, description: description, latitude: latitude, longitude: longitude, promotionalCode: promotionalCode, UIImage: image, SImage: nil)
+            
+            if(event == nil){
+                EventServices.default.putEvents(event: newEvent, completion: { res in
+                    let next = AddTicketsViewController.newInstance(eventID: res)
+                    self.navigationController?.pushViewController(next, animated: true)
+                })
+            } else {
+                EventServices.default.updateEvent(event: self.event!, title: (self.event?.title)!)
+            }
         }
-        
     }
     
     func verifForm() -> Bool {

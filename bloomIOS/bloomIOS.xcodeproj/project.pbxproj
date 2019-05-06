@@ -11,14 +11,19 @@
 		966FB86F0C2252B3510A42D5 /* Pods_bloomIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4DFA0B9451043D6E9D43845 /* Pods_bloomIOSTests.framework */; };
 		D55A10888C6EE8E4A4317AAF /* Pods_bloomIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FE351908E06EC756524A6F /* Pods_bloomIOS.framework */; };
 		F90ED9122271EC8400B082B9 /* kisspng-ticket-computer-icons-raffle-clip-art-5ada225a6f1780.4831654415242450824551.png in Resources */ = {isa = PBXBuildFile; fileRef = F90ED9112271EC8400B082B9 /* kisspng-ticket-computer-icons-raffle-clip-art-5ada225a6f1780.4831654415242450824551.png */; };
+		F90ED9142271F05B00B082B9 /* TicketServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90ED9132271F05B00B082B9 /* TicketServices.swift */; };
 		F92C9793225675500077B7CE /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92C97912256754F0077B7CE /* EventCollectionViewCell.swift */; };
 		F92C9794225675500077B7CE /* EventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92C9792225675500077B7CE /* EventCollectionViewCell.xib */; };
-		F92C97992256AD0A0077B7CE /* DetailEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92C97972256AD0A0077B7CE /* DetailEventViewController.swift */; };
-		F92C979A2256AD0A0077B7CE /* DetailEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92C97982256AD0A0077B7CE /* DetailEventViewController.xib */; };
 		F953A424225F34C400713022 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953A422225F34C400713022 /* LoginViewController.swift */; };
 		F953A425225F34C400713022 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F953A423225F34C400713022 /* LoginViewController.xib */; };
 		F953A429225F3FE900713022 /* AddTicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953A427225F3FE900713022 /* AddTicketsViewController.swift */; };
 		F953A42A225F3FE900713022 /* AddTicketsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F953A428225F3FE900713022 /* AddTicketsViewController.xib */; };
+		F963D3B8227DCED8001EB3B7 /* DetailEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F963D3B6227DCED8001EB3B7 /* DetailEventViewController.swift */; };
+		F963D3B9227DCED8001EB3B7 /* DetailEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F963D3B7227DCED8001EB3B7 /* DetailEventViewController.xib */; };
+		F963D3BC2280241A001EB3B7 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F963D3BA2280241A001EB3B7 /* RegisterViewController.swift */; };
+		F963D3BD2280241A001EB3B7 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F963D3BB2280241A001EB3B7 /* RegisterViewController.xib */; };
+		F963D3C122802C9A001EB3B7 /* RegisterServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F963D3C022802C9A001EB3B7 /* RegisterServices.swift */; };
+		F963D3C322803F8A001EB3B7 /* LoginServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F963D3C222803F8A001EB3B7 /* LoginServices.swift */; };
 		F96662B022511166008850A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96662AF22511166008850A4 /* AppDelegate.swift */; };
 		F96662B722511167008850A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F96662B622511167008850A4 /* Assets.xcassets */; };
 		F96662BA22511167008850A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F96662B822511167008850A4 /* LaunchScreen.storyboard */; };
@@ -65,14 +70,19 @@
 		D949A88E316A3F74E226E10E /* Pods-bloomIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bloomIOS.debug.xcconfig"; path = "Target Support Files/Pods-bloomIOS/Pods-bloomIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F543821B819254DD3D384A42 /* Pods-bloomIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bloomIOS.release.xcconfig"; path = "Target Support Files/Pods-bloomIOS/Pods-bloomIOS.release.xcconfig"; sourceTree = "<group>"; };
 		F90ED9112271EC8400B082B9 /* kisspng-ticket-computer-icons-raffle-clip-art-5ada225a6f1780.4831654415242450824551.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kisspng-ticket-computer-icons-raffle-clip-art-5ada225a6f1780.4831654415242450824551.png"; sourceTree = "<group>"; };
+		F90ED9132271F05B00B082B9 /* TicketServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketServices.swift; sourceTree = "<group>"; };
 		F92C97912256754F0077B7CE /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
 		F92C9792225675500077B7CE /* EventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCollectionViewCell.xib; sourceTree = "<group>"; };
-		F92C97972256AD0A0077B7CE /* DetailEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEventViewController.swift; sourceTree = "<group>"; };
-		F92C97982256AD0A0077B7CE /* DetailEventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailEventViewController.xib; sourceTree = "<group>"; };
 		F953A422225F34C400713022 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F953A423225F34C400713022 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		F953A427225F3FE900713022 /* AddTicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTicketsViewController.swift; sourceTree = "<group>"; };
 		F953A428225F3FE900713022 /* AddTicketsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTicketsViewController.xib; sourceTree = "<group>"; };
+		F963D3B6227DCED8001EB3B7 /* DetailEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEventViewController.swift; sourceTree = "<group>"; };
+		F963D3B7227DCED8001EB3B7 /* DetailEventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailEventViewController.xib; sourceTree = "<group>"; };
+		F963D3BA2280241A001EB3B7 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		F963D3BB2280241A001EB3B7 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		F963D3C022802C9A001EB3B7 /* RegisterServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterServices.swift; sourceTree = "<group>"; };
+		F963D3C222803F8A001EB3B7 /* LoginServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServices.swift; sourceTree = "<group>"; };
 		F96662AC22511166008850A4 /* bloomIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bloomIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F96662AF22511166008850A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F96662B622511167008850A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -153,6 +163,8 @@
 			children = (
 				F953A422225F34C400713022 /* LoginViewController.swift */,
 				F953A423225F34C400713022 /* LoginViewController.xib */,
+				F963D3BA2280241A001EB3B7 /* RegisterViewController.swift */,
+				F963D3BB2280241A001EB3B7 /* RegisterViewController.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -229,6 +241,9 @@
 			isa = PBXGroup;
 			children = (
 				F96662EA225126AC008850A4 /* EventServices.swift */,
+				F90ED9132271F05B00B082B9 /* TicketServices.swift */,
+				F963D3C022802C9A001EB3B7 /* RegisterServices.swift */,
+				F963D3C222803F8A001EB3B7 /* LoginServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -252,8 +267,8 @@
 				F96662E2225113E4008850A4 /* AddEventViewController.xib */,
 				F92C97912256754F0077B7CE /* EventCollectionViewCell.swift */,
 				F92C9792225675500077B7CE /* EventCollectionViewCell.xib */,
-				F92C97972256AD0A0077B7CE /* DetailEventViewController.swift */,
-				F92C97982256AD0A0077B7CE /* DetailEventViewController.xib */,
+				F963D3B6227DCED8001EB3B7 /* DetailEventViewController.swift */,
+				F963D3B7227DCED8001EB3B7 /* DetailEventViewController.xib */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -375,17 +390,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F92C979A2256AD0A0077B7CE /* DetailEventViewController.xib in Resources */,
 				F96662BA22511167008850A4 /* LaunchScreen.storyboard in Resources */,
 				F96662E62251198D008850A4 /* EventViewController.xib in Resources */,
 				F96662E4225113E4008850A4 /* AddEventViewController.xib in Resources */,
 				F9E3C53222609B1600CFBCB9 /* AddTicketFormViewController.xib in Resources */,
 				F953A42A225F3FE900713022 /* AddTicketsViewController.xib in Resources */,
+				F963D3B9227DCED8001EB3B7 /* DetailEventViewController.xib in Resources */,
 				F96662B722511167008850A4 /* Assets.xcassets in Resources */,
 				F9E3C53622609B8C00CFBCB9 /* TicketTableViewCell.xib in Resources */,
 				F953A425225F34C400713022 /* LoginViewController.xib in Resources */,
 				F90ED9122271EC8400B082B9 /* kisspng-ticket-computer-icons-raffle-clip-art-5ada225a6f1780.4831654415242450824551.png in Resources */,
 				F92C9794225675500077B7CE /* EventCollectionViewCell.xib in Resources */,
+				F963D3BD2280241A001EB3B7 /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,13 +520,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F96662EB225126AC008850A4 /* EventServices.swift in Sources */,
+				F963D3B8227DCED8001EB3B7 /* DetailEventViewController.swift in Sources */,
 				F92C9793225675500077B7CE /* EventCollectionViewCell.swift in Sources */,
 				F96662B022511166008850A4 /* AppDelegate.swift in Sources */,
-				F92C97992256AD0A0077B7CE /* DetailEventViewController.swift in Sources */,
 				F953A424225F34C400713022 /* LoginViewController.swift in Sources */,
+				F963D3C122802C9A001EB3B7 /* RegisterServices.swift in Sources */,
+				F90ED9142271F05B00B082B9 /* TicketServices.swift in Sources */,
 				F96662E3225113E4008850A4 /* AddEventViewController.swift in Sources */,
 				F9E3C53522609B8C00CFBCB9 /* TicketTableViewCell.swift in Sources */,
 				F9E3C53822609FB000CFBCB9 /* Ticket.swift in Sources */,
+				F963D3BC2280241A001EB3B7 /* RegisterViewController.swift in Sources */,
+				F963D3C322803F8A001EB3B7 /* LoginServices.swift in Sources */,
 				F9E3C53122609B1600CFBCB9 /* AddTicketFormViewController.swift in Sources */,
 				F96662DF22511208008850A4 /* EventViewController.swift in Sources */,
 				F953A429225F3FE900713022 /* AddTicketsViewController.swift in Sources */,

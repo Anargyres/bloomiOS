@@ -77,7 +77,6 @@ class EventViewController: UICollectionViewController, UICollectionViewDelegateF
             // Paysage
             return CGSize(width: (view.frame.width / 3) - 16, height: 250)
         } else {
-            
             // Portrait
             return CGSize(width: (view.frame.width / 2) - 16, height: 250)
         }
@@ -88,14 +87,14 @@ class EventViewController: UICollectionViewController, UICollectionViewDelegateF
     }
     
     @objc func handleAddEvent() {
-        let next = AddEventViewController.newInstance()
+        let next = AddEventViewController.newInstance(event: nil)
         self.navigationController?.pushViewController(next, animated: true)
     }
     
     @objc func onClickItemCollection(sender: UITapGestureRecognizer){
         
         if let cell = sender.view, let indexPath = self.collectionView.indexPath(for: cell as! UICollectionViewCell) {
-            let next = DetailEventViewController.newInstance(event: self.events[indexPath.row])
+            let next = AddEventViewController.newInstance(event: self.events[indexPath.row])
             self.navigationController?.pushViewController(next, animated: true)
         }
     }

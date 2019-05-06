@@ -16,9 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        
+        let loginViewController = LoginViewController()
+        
+        let navigationController = UINavigationController(rootViewController: loginViewController)
+        
+        let w = UIWindow(frame: UIScreen.main.bounds)
+        w.rootViewController = navigationController
+        w.makeKeyAndVisible()
+        self.window = w
+        
+        /*
 
         EventServices.default.getEvents { res in
-            print(res)
             let events = res as? [Event]
             let layout = UICollectionViewFlowLayout()
             let eventViewController = EventViewController(collectionViewLayout: layout)
@@ -30,8 +40,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             w.rootViewController = navigationController
             w.makeKeyAndVisible()
             self.window = w
+ 
+ 
         }
-        
+        */
         return true
     }
 
