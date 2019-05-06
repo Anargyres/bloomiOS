@@ -12,18 +12,16 @@ public class LoginServices {
     
     public static let `default` = LoginServices()
     
-    public func login(email: String, password: String, completion: @escaping (String) -> Void) {
+    public func login(email: String, password: String, completion: @escaping ([String: Any]) -> Void) {
         
         let parameters: Parameters = ["email": email, "password": password]
         
         Alamofire.request("http://localhost:3000/login", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { (res) in
-            guard let json = res.result.value as? [String: Any],
-            let error = json["error"] as? String
+            guard let json = res.result.value as? [String: Any]
             else {
-                completion("ok")
                 return
             }
-            completion(error)
+            completion(json)
         }
         
     }

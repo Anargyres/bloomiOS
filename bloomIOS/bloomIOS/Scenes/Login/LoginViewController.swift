@@ -36,9 +36,10 @@ class LoginViewController: UIViewController {
     @IBAction func handleConnectionPress(_ sender: Any) {
         LoginServices.default.login(email: emailTextField.text!, password: passwordTextField.text!) { res in
             self.errorLabel.isHidden = false
-            self.errorLabel.text = res
-            
-            if(res == "ok"){
+            self.errorLabel.text = res["error"] as? String
+                        
+            if(res["token"] != nil ){
+                self.errorLabel.isHidden = true
                 EventServices.default.getEvents { res in
                     let events = res as? [Event]
                     let layout = UICollectionViewFlowLayout()
