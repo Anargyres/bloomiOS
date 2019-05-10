@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     var window: UIWindow?
     
     @IBOutlet var loginImageView: UIImageView!
+    @IBOutlet var loginButto: UIButton!
     @IBOutlet var errorLabel: UILabel!
     @IBOutlet var registerLabel: UILabel!
     @IBOutlet var emailTextField: UITextField!
@@ -31,7 +32,9 @@ class LoginViewController: UIViewController {
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.handleRegisterPress))
         registerLabel.isUserInteractionEnabled = true
         registerLabel.addGestureRecognizer(gestureRecognizer)
-        
+        loginButto.layer.cornerRadius = 7
+        loginButto.layer.borderWidth = 1
+        loginButto.layer.borderColor = UIColor.black.cgColor
 
     }
 
@@ -52,10 +55,15 @@ class LoginViewController: UIViewController {
                     
                     let navigationController = UINavigationController(rootViewController: eventViewController)
                     
-                    let w = UIWindow(frame: UIScreen.main.bounds)
-                    w.rootViewController = navigationController
-                    w.makeKeyAndVisible()
-                    self.window = w
+                    UIView.animate(withDuration: 0.1, animations: {
+                        self.loginButto.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+                    }, completion: { _ in UIView.animate(withDuration: 0.1) {
+                        self.loginButto.transform = CGAffineTransform.identity
+                        let w = UIWindow(frame: UIScreen.main.bounds)
+                        w.rootViewController = navigationController
+                        w.makeKeyAndVisible()
+                        self.window = w
+                    }})
                 }
             }
         }

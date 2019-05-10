@@ -59,11 +59,13 @@ class EventViewController: UICollectionViewController, UICollectionViewDelegateF
         cell.contentView.layer.borderWidth = 1.0
         cell.contentView.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         cell.contentView.layer.masksToBounds = true
+        cell.contentView.layer.cornerRadius = 7
         
         cell.layer.shadowColor = #colorLiteral(red: 0.008968460207, green: 0.02003048991, blue: 0.1091370558, alpha: 1)
         cell.layer.shadowOffset = CGSize(width: 5.0, height: -5.0)
         cell.layer.shadowOpacity = 0.5
-        cell.layer.masksToBounds = false
+        cell.layer.shadowRadius = 7
+        cell.layer.masksToBounds = true
         
 
         let requestUrl = "http://localhost:3000/images/\(self.events[indexPath.row].SImage!)"

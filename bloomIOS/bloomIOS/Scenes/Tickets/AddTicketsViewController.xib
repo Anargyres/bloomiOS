@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddTicketsViewController" customModule="bloomIOS" customModuleProvider="target">
             <connections>
+                <outlet property="createEventButton" destination="zlH-do-0OS" id="iof-qC-car"/>
                 <outlet property="tableView" destination="rZi-Tj-iVA" id="zgl-Ao-ux7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -22,28 +23,29 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rZi-Tj-iVA">
-                    <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                    <rect key="frame" x="32" y="195" width="770" height="704"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zlH-do-0OS">
-                        <rect key="frame" x="0.0" y="828" width="834" height="44"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="0.023529411764705882" green="0.039215686274509803" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <state key="normal" title="Create event">
-                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </state>
-                        <connections>
-                            <action selector="handleSubmitEvent:" destination="-1" eventType="touchUpInside" id="dam-5e-fvx"/>
-                        </connections>
-                    </button>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlH-do-0OS">
+                    <rect key="frame" x="32" y="1030" width="770" height="30"/>
+                    <color key="backgroundColor" red="0.023529411764705882" green="0.039215686274509803" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Create event">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="handleSubmitEvent:" destination="-1" eventType="touchUpInside" id="dam-5e-fvx"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="rZi-Tj-iVA" secondAttribute="bottom" id="E29-ql-0uV"/>
-                <constraint firstAttribute="bottom" secondItem="rZi-Tj-iVA" secondAttribute="bottom" id="aW0-N3-3Jb"/>
-                <constraint firstItem="rZi-Tj-iVA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bN7-3A-eTh"/>
-                <constraint firstItem="rZi-Tj-iVA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fGd-UP-12n"/>
-                <constraint firstItem="rZi-Tj-iVA" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="znS-vn-UdC"/>
+                <constraint firstItem="rZi-Tj-iVA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="0OO-5v-YCk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rZi-Tj-iVA" secondAttribute="trailing" constant="32" id="F3Y-v0-iaK"/>
+                <constraint firstItem="zlH-do-0OS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="ImT-3F-ke3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="rZi-Tj-iVA" secondAttribute="bottom" constant="275" id="YSq-TB-nc3"/>
+                <constraint firstItem="rZi-Tj-iVA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="171" id="aW8-gt-ffb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="zlH-do-0OS" secondAttribute="bottom" constant="114" id="cJg-zx-yYx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zlH-do-0OS" secondAttribute="trailing" constant="32" id="uIo-aT-JVh"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="138.12949640287772" y="126.13065326633166"/>

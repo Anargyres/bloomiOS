@@ -14,6 +14,7 @@ class AddEventViewController: UIViewController {
     var event: Event?
     var token: String!
     
+    @IBOutlet var handleAddEventButton: UIButton!
     @IBOutlet var backgroundView: UIView!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var titleLabel: UITextField!
@@ -39,9 +40,13 @@ class AddEventViewController: UIViewController {
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.handleTicketsPress))
         
+        handleAddEventButton.layer.cornerRadius = 10
+        handleAddEventButton.layer.borderWidth = 1
+        handleAddEventButton.layer.borderColor = UIColor.black.cgColor
+        
         self.descriptionLabel.layer.borderWidth = 1
         self.descriptionLabel.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        self.descriptionLabel.layer.cornerRadius = 10
+        self.descriptionLabel.layer.cornerRadius = 7
         self.descriptionLabel.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(AddEventViewController.onClickImageView))
@@ -49,11 +54,15 @@ class AddEventViewController: UIViewController {
         imageView.isUserInteractionEnabled = true
         imagePicker.delegate = self
         
-        
+        imageView.layer.shadowColor = #colorLiteral(red: 0.008968460207, green: 0.02003048991, blue: 0.1091370558, alpha: 1)
+        imageView.layer.shadowOffset = CGSize(width: 5.0, height: -5.0)
+        imageView.layer.shadowOpacity = 0.5
+        imageView.layer.masksToBounds = false
         // DetailEventViewController
         
         if(event != nil){
             self.navigationItem.title = event?.title
+            self.handleAddEventButton.setTitle("Update", for: .normal)
             self.titleLabel.text = event?.title
             self.descriptionLabel.text = event?.description
             self.latitudeLabel.text = event?.latitude
