@@ -12,12 +12,15 @@ public class EventServices {
     
     public static let `default` = EventServices()
     
-
-    public func getEvents(completion: @escaping ([Event]) -> Void) {
+    public func getEvents(token: String, completion: @escaping ([Event]) -> Void) {
         
         var allEvents = [Event]()
+        
+        let headers: HTTPHeaders = [
+            "x-access-token": token,
+        ]
 
-        Alamofire.request("http://localhost:3000/events").responseJSON { (res) in
+        Alamofire.request("http://localhost:3000/events", headers: headers).responseJSON { (res) in
             guard let events = res.result.value as? [[String:Any]]
             else {
                 return
@@ -49,16 +52,19 @@ public class EventServices {
         }
     }
     
-    public func putEvents(event: Event, completion: @escaping (String) -> Void) {
+    public func putEvents(token: String, event: Event, completion: @escaping (String) -> Void) {
 
         let imageData = event.UIImage?.jpegData(compressionQuality: 0.2)
+        let headers: HTTPHeaders = [
+            "x-access-token": token,
+            ]
         
         Alamofire.upload(multipartFormData: { multipartFormData in
             for (key,value) in event.toJSON() {
                 multipartFormData.append((value as! String).data(using: .utf8)!, withName: key)
             }
             multipartFormData.append(imageData!, withName: "fileset",fileName: event.title + ".jpg", mimeType: "image/jpg")
-        }, to:"http://localhost:3000/events")
+        }, to:"http://localhost:3000/events", headers: headers)
         { result in
             switch result {
             case .success(let upload, _, _):
@@ -102,6 +108,12 @@ public class EventServices {
                 print(encodingError)
             }
         }
+    }
+    
+    public func removeEvent(event: Event){
+        
+        let parameters: Parameters = ["title": event.title]
+        Alamofire.request("http://localhost:3000/events", method: .delete, parameters: parameters, encoding: JSONEncoding.default)
     }
 }
 

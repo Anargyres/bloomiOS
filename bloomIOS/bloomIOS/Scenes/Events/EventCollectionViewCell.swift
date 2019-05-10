@@ -8,17 +8,25 @@
 
 import UIKit
 
-class EventCollectionViewCell: UICollectionViewCell {
+protocol EventCellDelegate: class {
+    func delete(cell: EventCollectionViewCell)
+}
 
+class EventCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var imageCollectionView: UIImageView!
     @IBOutlet var titleCollectionView: UILabel!
+    
+    weak var delegate: EventCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-    
+     
+    @IBAction func dropEventButton(_ sender: Any) {
+        delegate?.delete(cell: self)
+    }
     
 
 }

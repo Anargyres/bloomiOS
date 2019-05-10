@@ -13,11 +13,15 @@ import AlamofireImage
 class EventViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     var events: [Event]!
+    var token: String!
     let cellIdentifier = "cellIdentifier"
+    let atvc = AddTicketsViewController()
     
-    class func newInstance(events: [Event]) -> EventViewController{
+    
+    class func newInstance(events: [Event], token: String) -> EventViewController{
         let evc = EventViewController()
         evc.events = events
+        evc.token = token
         return evc
     }
     
@@ -25,7 +29,12 @@ class EventViewController: UICollectionViewController, UICollectionViewDelegateF
         super.viewDidLoad()
         
         self.navigationItem.title = "Events"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.handleAddEvent))
+        self.navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.handleAddEventPress)),
+        UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(self.handleMyAccountPress))
+        ]
+        
+        atvc.pressDelegate = self
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.008968460207, green: 0.02003048991, blue: 0.1091370558, alpha: 1)
         navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
@@ -40,6 +49,8 @@ class EventViewController: UICollectionViewController, UICollectionViewDelegateF
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! EventCollectionViewCell
+        
+        cell.delegate = self
         
         cell.titleCollectionView.font = UIFont.boldSystemFont(ofSize: 20)
         cell.titleCollectionView.text = self.events[indexPath.row].title
@@ -57,15 +68,20 @@ class EventViewController: UICollectionViewController, UICollectionViewDelegateF
 
         let requestUrl = "http://localhost:3000/images/\(self.events[indexPath.row].SImage!)"
         
-        
         Alamofire.request(requestUrl, method: .get)
             .responseData(completionHandler: { (responseData) in
+                print(responseData)
                 cell.imageCollectionView.image = UIImage(data: responseData.data!)
             })
+        
+        
+        // Show details event
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(EventViewController.onClickItemCollection(sender:)))
         cell.addGestureRecognizer(tap)
         cell.isUserInteractionEnabled = true
+        
+        // Remove details Event
 
         
         return cell
@@ -86,18 +102,38 @@ class EventViewController: UICollectionViewController, UICollectionViewDelegateF
         return UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
     }
     
-    @objc func handleAddEvent() {
-        let next = AddEventViewController.newInstance(event: nil)
+    @objc func handleAddEventPress() {
+        let next = AddEventViewController.newInstance(event: nil, token: self.token)
         self.navigationController?.pushViewController(next, animated: true)
+    }
+    
+    @objc func handleMyAccountPress(){
+        let alvc = AccountListViewController()
+        alvc.token = self.token
+        self.navigationController?.pushViewController(alvc, animated: true)
     }
     
     @objc func onClickItemCollection(sender: UITapGestureRecognizer){
         
         if let cell = sender.view, let indexPath = self.collectionView.indexPath(for: cell as! UICollectionViewCell) {
-            let next = AddEventViewController.newInstance(event: self.events[indexPath.row])
+            let next = AddEventViewController.newInstance(event: self.events[indexPath.row], token: self.token)
             self.navigationController?.pushViewController(next, animated: true)
         }
     }
-
 }
 
+extension EventViewController: UpdateEventsProtocol {
+    func updateEvents(events: [Event]) {
+        self.events = events
+        collectionView.reloadData()
+    }
+}
+
+extension EventViewController: EventCellDelegate {
+    func delete(cell: EventCollectionViewCell) {
+        let indexPath = collectionView?.indexPath(for: cell)
+        EventServices.default.removeEvent(event: self.events[(indexPath?.row)!])
+        self.events.remove(at: (indexPath?.row)!)
+        self.collectionView.deleteItems(at: [indexPath!])
+    }
+}

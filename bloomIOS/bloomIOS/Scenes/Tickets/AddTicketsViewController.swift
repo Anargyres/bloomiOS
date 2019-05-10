@@ -8,17 +8,24 @@
 
 import UIKit
 
+protocol UpdateEventsProtocol: class {
+    func updateEvents(events: [Event])
+}
+
 class AddTicketsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var eventID: String!
+    var token: String!
     var tickets: [Ticket] = []
+    weak var pressDelegate: UpdateEventsProtocol?
     @IBOutlet var tableView: UITableView!
     
     let cellIdentifier = "cellIdentifier"
     
-    class func newInstance(eventID: String) -> AddTicketsViewController {
+    class func newInstance(eventID: String, token: String) -> AddTicketsViewController {
         let evc = AddTicketsViewController()
         evc.eventID = eventID
+        evc.token = token
         
         return evc
     }
@@ -59,7 +66,17 @@ class AddTicketsViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @IBAction func handleSubmitEvent(_ sender: Any) {
         TicketServices.default.putTicket(tickets: tickets)
-        self.navigationController?.popToRootViewController(animated: true)
+        EventServices.default.getEvents(token: self.token) { responseEvent in
+            let events = responseEvent as [Event]
+
+            self.pressDelegate?.updateEvents(events: events)
+            for vc in self.navigationController!.viewControllers {
+                if let evc = vc as? EventViewController {
+                    evc.events = events
+                    self.navigationController?.popToViewController(evc, animated: true)
+                }
+            }
+        }
     }
 }
 

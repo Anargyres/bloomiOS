@@ -12,6 +12,8 @@ import Alamofire
 class AddEventViewController: UIViewController {
     
     var event: Event?
+    var token: String!
+    
     @IBOutlet var backgroundView: UIView!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var titleLabel: UITextField!
@@ -22,9 +24,10 @@ class AddEventViewController: UIViewController {
     
     var imagePicker = UIImagePickerController()
     
-    class func newInstance(event: Event?) -> AddEventViewController{
+    class func newInstance(event: Event?, token: String) -> AddEventViewController{
         let dvc = AddEventViewController()
         dvc.event = event
+        dvc.token = token
         return dvc
     }
 
@@ -50,13 +53,19 @@ class AddEventViewController: UIViewController {
         // DetailEventViewController
         
         if(event != nil){
+            self.navigationItem.title = event?.title
             self.titleLabel.text = event?.title
             self.descriptionLabel.text = event?.description
             self.latitudeLabel.text = event?.latitude
             self.longitudeLabel.text = event?.longitude
             self.promotionalCodeLabel.text = event?.promotionalCode
             
-            let requestUrl = "http://localhost:3000/images/\(event?.SImage!)"
+            guard let imageName = event?.SImage as? String
+            else {
+                return
+            }
+            
+            let requestUrl = "http://localhost:3000/images/\(imageName)"
             
             
             Alamofire.request(requestUrl, method: .get)
@@ -95,8 +104,8 @@ class AddEventViewController: UIViewController {
             let newEvent = Event(title: title, description: description, latitude: latitude, longitude: longitude, promotionalCode: promotionalCode, UIImage: image, SImage: nil)
             
             if(event == nil){
-                EventServices.default.putEvents(event: newEvent, completion: { res in
-                    let next = AddTicketsViewController.newInstance(eventID: res)
+                EventServices.default.putEvents(token: self.token, event: newEvent, completion: { res in
+                    let next = AddTicketsViewController.newInstance(eventID: res, token: self.token)
                     self.navigationController?.pushViewController(next, animated: true)
                 })
             } else {

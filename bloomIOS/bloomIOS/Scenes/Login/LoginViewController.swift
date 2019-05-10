@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
 
     var window: UIWindow?
     
+    @IBOutlet var loginImageView: UIImageView!
     @IBOutlet var errorLabel: UILabel!
     @IBOutlet var registerLabel: UILabel!
     @IBOutlet var emailTextField: UITextField!
@@ -30,21 +31,24 @@ class LoginViewController: UIViewController {
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.handleRegisterPress))
         registerLabel.isUserInteractionEnabled = true
         registerLabel.addGestureRecognizer(gestureRecognizer)
+        
+
     }
 
 
     @IBAction func handleConnectionPress(_ sender: Any) {
-        LoginServices.default.login(email: emailTextField.text!, password: passwordTextField.text!) { res in
+        LoginServices.default.login(email: emailTextField.text!, password: passwordTextField.text!) { responseLogin in
             self.errorLabel.isHidden = false
-            self.errorLabel.text = res["error"] as? String
+            self.errorLabel.text = responseLogin["error"] as? String
                         
-            if(res["token"] != nil ){
+            if(responseLogin["token"] != nil ){
                 self.errorLabel.isHidden = true
-                EventServices.default.getEvents { res in
-                    let events = res as? [Event]
+                EventServices.default.getEvents(token: responseLogin["token"] as! String) { responseEvent in
+                    let events = responseEvent as [Event]
                     let layout = UICollectionViewFlowLayout()
                     let eventViewController = EventViewController(collectionViewLayout: layout)
                     eventViewController.events = events
+                    eventViewController.token = responseLogin["token"] as? String
                     
                     let navigationController = UINavigationController(rootViewController: eventViewController)
                     

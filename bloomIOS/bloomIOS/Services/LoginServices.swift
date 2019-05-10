@@ -23,7 +23,6 @@ public class LoginServices {
             }
             completion(json)
         }
-        
     }
 }
 
