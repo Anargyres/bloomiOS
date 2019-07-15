@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccountListViewController" customModule="bloomIOS" customModuleProvider="target">
             <connections>
-                <outlet property="eventHistoryButton" destination="vVM-bL-D9a" id="0A2-3M-xTT"/>
+                <outlet property="deconnexionButton" destination="wst-IK-UEy" id="2i3-ZS-KeK"/>
                 <outlet property="personnalInformationsButton" destination="2x3-kc-Nli" id="JE5-Sk-WCi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -22,20 +22,6 @@
             <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVM-bL-D9a">
-                    <rect key="frame" x="50" y="224" width="734" height="100"/>
-                    <color key="backgroundColor" red="0.023529411760000001" green="0.039215686270000001" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="100" id="0Xl-LI-scU"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="23"/>
-                    <state key="normal" title="Event history">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <connections>
-                        <action selector="handleEventsPress:" destination="-1" eventType="touchUpInside" id="kxM-8n-gZO"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2x3-kc-Nli">
                     <rect key="frame" x="50" y="74" width="734" height="100"/>
                     <color key="backgroundColor" red="0.023529411760000001" green="0.039215686270000001" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -50,15 +36,30 @@
                         <action selector="handlePersonnalInformationsPress:" destination="-1" eventType="touchUpInside" id="QFD-NU-ju0"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wst-IK-UEy">
+                    <rect key="frame" x="50" y="204" width="734" height="100"/>
+                    <color key="backgroundColor" red="0.7843137255" green="0.070588235289999995" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="voz-ZR-0yl"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="23"/>
+                    <state key="normal" title="Deconnexion">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="handleDeconnexionPress:" destination="-1" eventType="touchUpInside" id="t1e-o1-USb"/>
+                        <action selector="handleEventsPress:" destination="-1" eventType="touchUpInside" id="cxl-xA-hwg"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="vVM-bL-D9a" firstAttribute="top" secondItem="2x3-kc-Nli" secondAttribute="bottom" constant="50" id="9Eu-0O-mWG"/>
                 <constraint firstItem="2x3-kc-Nli" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="CCh-Vt-Lh1"/>
-                <constraint firstItem="vVM-bL-D9a" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aX9-9X-gaJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wst-IK-UEy" secondAttribute="trailing" constant="50" id="HsG-U4-V1j"/>
+                <constraint firstItem="wst-IK-UEy" firstAttribute="top" secondItem="2x3-kc-Nli" secondAttribute="bottom" constant="30" id="R1Q-fa-ert"/>
                 <constraint firstItem="2x3-kc-Nli" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="bD5-WD-hcz"/>
+                <constraint firstItem="wst-IK-UEy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="kaj-a3-odp"/>
                 <constraint firstItem="2x3-kc-Nli" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="rfz-hz-Fut"/>
-                <constraint firstItem="vVM-bL-D9a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="w0w-HO-Jdc"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="138.84892086330936" y="115.57788944723619"/>

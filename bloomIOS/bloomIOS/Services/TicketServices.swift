@@ -23,9 +23,21 @@ public class TicketServices {
                 "quantity": ticket.quantity
             ]
             
-            Alamofire.request("http://localhost:3000/tickets", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+            Alamofire.request("https://lit-sands-88177.herokuapp.com/tickets", method: .post, parameters: parameters, encoding: JSONEncoding.default)
 
         });
+    }
+    
+    public func setPromotionalCode(promotionalCode: PromotionalCode){
+        
+        let parameters: Parameters = [
+            "idEvent": promotionalCode.idEvent,
+            "name": promotionalCode.name,
+            "price": promotionalCode.price,
+            "quantity": promotionalCode.quantity
+        ]
+        
+        Alamofire.request("https://lit-sands-88177.herokuapp.com/tickets/promotionalCode", method: .post, parameters: parameters, encoding: JSONEncoding.default)
     }
 }
 

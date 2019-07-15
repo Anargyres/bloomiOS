@@ -13,6 +13,9 @@
 		F90ED9142271F05B00B082B9 /* TicketServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90ED9132271F05B00B082B9 /* TicketServices.swift */; };
 		F92C9793225675500077B7CE /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92C97912256754F0077B7CE /* EventCollectionViewCell.swift */; };
 		F92C9794225675500077B7CE /* EventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92C9792225675500077B7CE /* EventCollectionViewCell.xib */; };
+		F932EFD222D1EF4300CE1D81 /* AllEventsResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F932EFD022D1EF4300CE1D81 /* AllEventsResumeViewController.swift */; };
+		F932EFD322D1EF4300CE1D81 /* AllEventsResumeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F932EFD122D1EF4300CE1D81 /* AllEventsResumeViewController.xib */; };
+		F93BFAAA22A19C3600CD4DD1 /* PromotionalCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93BFAA922A19C3600CD4DD1 /* PromotionalCode.swift */; };
 		F953A424225F34C400713022 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953A422225F34C400713022 /* LoginViewController.swift */; };
 		F953A425225F34C400713022 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F953A423225F34C400713022 /* LoginViewController.xib */; };
 		F953A429225F3FE900713022 /* AddTicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953A427225F3FE900713022 /* AddTicketsViewController.swift */; };
@@ -36,6 +39,8 @@
 		F9AB088E2285801F00DD07ED /* AccountListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9AB088C2285801F00DD07ED /* AccountListViewController.xib */; };
 		F9AB08912285BC2C00DD07ED /* PersonnalInformationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB088F2285BC2C00DD07ED /* PersonnalInformationsViewController.swift */; };
 		F9AB08922285BC2C00DD07ED /* PersonnalInformationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9AB08902285BC2C00DD07ED /* PersonnalInformationsViewController.xib */; };
+		F9AB08A92285D4EE00DD07ED /* AccountServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB08A82285D4EE00DD07ED /* AccountServices.swift */; };
+		F9AB08AB2285D7B900DD07ED /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB08AA2285D7B900DD07ED /* Manager.swift */; };
 		F9E3C53122609B1600CFBCB9 /* AddTicketFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E3C52F22609B1600CFBCB9 /* AddTicketFormViewController.swift */; };
 		F9E3C53222609B1600CFBCB9 /* AddTicketFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E3C53022609B1600CFBCB9 /* AddTicketFormViewController.xib */; };
 		F9E3C53522609B8C00CFBCB9 /* TicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E3C53322609B8C00CFBCB9 /* TicketTableViewCell.swift */; };
@@ -73,6 +78,9 @@
 		F90ED9132271F05B00B082B9 /* TicketServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketServices.swift; sourceTree = "<group>"; };
 		F92C97912256754F0077B7CE /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
 		F92C9792225675500077B7CE /* EventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCollectionViewCell.xib; sourceTree = "<group>"; };
+		F932EFD022D1EF4300CE1D81 /* AllEventsResumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEventsResumeViewController.swift; sourceTree = "<group>"; };
+		F932EFD122D1EF4300CE1D81 /* AllEventsResumeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllEventsResumeViewController.xib; sourceTree = "<group>"; };
+		F93BFAA922A19C3600CD4DD1 /* PromotionalCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionalCode.swift; sourceTree = "<group>"; };
 		F953A422225F34C400713022 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F953A423225F34C400713022 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		F953A427225F3FE900713022 /* AddTicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTicketsViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +110,8 @@
 		F9AB088C2285801F00DD07ED /* AccountListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountListViewController.xib; sourceTree = "<group>"; };
 		F9AB088F2285BC2C00DD07ED /* PersonnalInformationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonnalInformationsViewController.swift; sourceTree = "<group>"; };
 		F9AB08902285BC2C00DD07ED /* PersonnalInformationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonnalInformationsViewController.xib; sourceTree = "<group>"; };
+		F9AB08A82285D4EE00DD07ED /* AccountServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServices.swift; sourceTree = "<group>"; };
+		F9AB08AA2285D7B900DD07ED /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		F9E3C52F22609B1600CFBCB9 /* AddTicketFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTicketFormViewController.swift; sourceTree = "<group>"; };
 		F9E3C53022609B1600CFBCB9 /* AddTicketFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTicketFormViewController.xib; sourceTree = "<group>"; };
 		F9E3C53322609B8C00CFBCB9 /* TicketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTableViewCell.swift; sourceTree = "<group>"; };
@@ -245,6 +255,7 @@
 				F90ED9132271F05B00B082B9 /* TicketServices.swift */,
 				F963D3C022802C9A001EB3B7 /* RegisterServices.swift */,
 				F963D3C222803F8A001EB3B7 /* LoginServices.swift */,
+				F9AB08A82285D4EE00DD07ED /* AccountServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -269,6 +280,8 @@
 				F96662E2225113E4008850A4 /* AddEventViewController.xib */,
 				F92C97912256754F0077B7CE /* EventCollectionViewCell.swift */,
 				F92C9792225675500077B7CE /* EventCollectionViewCell.xib */,
+				F932EFD022D1EF4300CE1D81 /* AllEventsResumeViewController.swift */,
+				F932EFD122D1EF4300CE1D81 /* AllEventsResumeViewController.xib */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -278,6 +291,8 @@
 			children = (
 				F96662ED22512F87008850A4 /* Event.swift */,
 				F9E3C53722609FB000CFBCB9 /* Ticket.swift */,
+				F9AB08AA2285D7B900DD07ED /* Manager.swift */,
+				F93BFAA922A19C3600CD4DD1 /* PromotionalCode.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -407,6 +422,7 @@
 				F96662E4225113E4008850A4 /* AddEventViewController.xib in Resources */,
 				F9E3C53222609B1600CFBCB9 /* AddTicketFormViewController.xib in Resources */,
 				F953A42A225F3FE900713022 /* AddTicketsViewController.xib in Resources */,
+				F932EFD322D1EF4300CE1D81 /* AllEventsResumeViewController.xib in Resources */,
 				F9AB088E2285801F00DD07ED /* AccountListViewController.xib in Resources */,
 				F96662B722511167008850A4 /* Assets.xcassets in Resources */,
 				F9E3C53622609B8C00CFBCB9 /* TicketTableViewCell.xib in Resources */,
@@ -533,11 +549,15 @@
 				F96662EB225126AC008850A4 /* EventServices.swift in Sources */,
 				F9AB088D2285801F00DD07ED /* AccountListViewController.swift in Sources */,
 				F92C9793225675500077B7CE /* EventCollectionViewCell.swift in Sources */,
+				F93BFAAA22A19C3600CD4DD1 /* PromotionalCode.swift in Sources */,
+				F9AB08A92285D4EE00DD07ED /* AccountServices.swift in Sources */,
 				F96662B022511166008850A4 /* AppDelegate.swift in Sources */,
+				F9AB08AB2285D7B900DD07ED /* Manager.swift in Sources */,
 				F953A424225F34C400713022 /* LoginViewController.swift in Sources */,
 				F963D3C122802C9A001EB3B7 /* RegisterServices.swift in Sources */,
 				F90ED9142271F05B00B082B9 /* TicketServices.swift in Sources */,
 				F96662E3225113E4008850A4 /* AddEventViewController.swift in Sources */,
+				F932EFD222D1EF4300CE1D81 /* AllEventsResumeViewController.swift in Sources */,
 				F9AB08912285BC2C00DD07ED /* PersonnalInformationsViewController.swift in Sources */,
 				F9E3C53522609B8C00CFBCB9 /* TicketTableViewCell.swift in Sources */,
 				F9E3C53822609FB000CFBCB9 /* Ticket.swift in Sources */,

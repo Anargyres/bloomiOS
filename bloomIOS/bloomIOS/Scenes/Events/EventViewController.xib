@@ -20,24 +20,15 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="nLQ-V2-pXg">
-                    <rect key="frame" x="0.0" y="20" width="834" height="1174"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <collectionViewLayout key="collectionViewLayout" id="WAE-eV-dFB"/>
-                </collectionView>
-            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <constraints>
-                <constraint firstItem="nLQ-V2-pXg" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="5FG-sL-DEc"/>
-                <constraint firstItem="nLQ-V2-pXg" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="9v9-r2-9dU"/>
-                <constraint firstAttribute="bottom" secondItem="nLQ-V2-pXg" secondAttribute="bottom" id="J2y-9k-14Z"/>
-                <constraint firstItem="nLQ-V2-pXg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="MP5-xc-vp6"/>
-                <constraint firstItem="nLQ-V2-pXg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="UPG-sf-VJg"/>
-                <constraint firstAttribute="bottom" secondItem="nLQ-V2-pXg" secondAttribute="bottom" id="yOm-KM-GNu"/>
-            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="138.69346733668343" y="145.32374100719426"/>
         </view>
+        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" id="nLQ-V2-pXg">
+            <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <collectionViewLayout key="collectionViewLayout" id="WAE-eV-dFB"/>
+        </collectionView>
     </objects>
 </document>

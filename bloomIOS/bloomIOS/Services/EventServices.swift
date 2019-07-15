@@ -20,7 +20,7 @@ public class EventServices {
             "x-access-token": token,
         ]
 
-        Alamofire.request("http://localhost:3000/events", headers: headers).responseJSON { (res) in
+        Alamofire.request("https://lit-sands-88177.herokuapp.com/events", headers: headers).responseJSON { (res) in
             guard let events = res.result.value as? [[String:Any]]
             else {
                 return
@@ -32,9 +32,8 @@ public class EventServices {
                 let description = event["description"] as? String,
                 let image = event["image"] as? String,
                 let promotionalCode = event["promotionalCode"] as? String,
-                let coord = event["coord"] as? [String: Any],
-                let latitude = coord["latitude"] as? String,
-                let longitude = coord["longitude"] as? String
+                let latitude = event["latitude"] as? String,
+                let longitude = event["longitude"] as? String
                 else {
                     return
                 }
@@ -63,8 +62,8 @@ public class EventServices {
             for (key,value) in event.toJSON() {
                 multipartFormData.append((value as! String).data(using: .utf8)!, withName: key)
             }
-            multipartFormData.append(imageData!, withName: "fileset",fileName: event.title + ".jpg", mimeType: "image/jpg")
-        }, to:"http://localhost:3000/events", headers: headers)
+            multipartFormData.append(imageData!, withName: "fileset",fileName: self.randomString(length: 10) + ".jpg", mimeType: "image/jpg")
+        }, to:"https://lit-sands-88177.herokuapp.com/events", headers: headers)
         { result in
             switch result {
             case .success(let upload, _, _):
@@ -91,8 +90,8 @@ public class EventServices {
             for (key,value) in event.toJSON() {
                 multipartFormData.append((value as! String).data(using: .utf8)!, withName: key)
             }
-            multipartFormData.append(imageData!, withName: "fileset",fileName: event.title + ".jpg", mimeType: "image/jpg")
-        }, to:"http://localhost:3000/events/update/\(title)")
+            multipartFormData.append(imageData!, withName: "fileset",fileName: title + ".jpg", mimeType: "image/jpg")
+        }, to:"https://lit-sands-88177.herokuapp.com/events/update/\(title)")
         { result in
             switch result {
             case .success(let upload, _, _):
@@ -110,10 +109,69 @@ public class EventServices {
         }
     }
     
+    public func addDate(idEvent: String, date: String){
+        let parameters: Parameters = [
+            "idEvent": idEvent, 
+            "date": date
+        ]
+        
+        Alamofire.request("https://lit-sands-88177.herokuapp.com/events/addDate", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        
+    }
+    
+    public func getResumeTicket(eventTitle: String, completion: @escaping ([Ticket]) -> Void){
+        
+        var allTickets = [Ticket]()
+
+        Alamofire.request("https://lit-sands-88177.herokuapp.com/events/resume/\(eventTitle)").responseJSON { (res) in
+            print(res)
+            guard let tickets = res.result.value as? [[String:Any]]
+            else {
+                return
+            }
+            let ticketsCount = tickets.count
+            
+            tickets.forEach({ ticket in
+                let idEvent = ticket["idEvent"] as? String
+                let name = ticket["name"] as? String
+                let price = ticket["price"] as? String
+                let quantity = ticket["quantity"] as? Int
+                let quantityUpdated = ticket["quantityUpdated"] as? Int
+                
+                
+                let newTicket = Ticket(idEvent: idEvent!, name: name!, price: price!, quantity: quantity!, quantityUpdated: quantityUpdated!)
+            
+                allTickets.append(newTicket)
+                if(allTickets.count == ticketsCount) {
+                    completion(allTickets)
+                }
+            });
+            if(tickets.count == 0){
+                completion([])
+            }
+        }
+    }
+    
+    public func getPromotionalCodeReduction(idEvent: String, completion: @escaping (Int) -> Void){
+        Alamofire.request("https://lit-sands-88177.herokuapp.com/events/promotionalCode/\(idEvent)").responseJSON { (res) in
+            guard let totalReduce = res.result.value as? [String:Any],
+            let numberPromotionalCode = totalReduce["totalReduce"] as? Int
+            else {
+                return
+            }
+            completion(numberPromotionalCode)
+        }
+    }
+    
     public func removeEvent(event: Event){
         
         let parameters: Parameters = ["title": event.title]
-        Alamofire.request("http://localhost:3000/events", method: .delete, parameters: parameters, encoding: JSONEncoding.default)
+        Alamofire.request("https://lit-sands-88177.herokuapp.com/events", method: .delete, parameters: parameters, encoding: JSONEncoding.default)
+    }
+    
+    func randomString(length: Int) -> String {
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return String((0..<length).map{ _ in letters.randomElement()! })
     }
 }
 

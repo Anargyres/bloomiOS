@@ -20,6 +20,10 @@ class AddTicketsViewController: UIViewController, UITableViewDelegate, UITableVi
     var tickets: [Ticket] = []
     weak var pressDelegate: UpdateEventsProtocol?
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var promotionalCodeName: UITextField!
+    @IBOutlet var promotionalCodeQuantity: UITextField!
+    @IBOutlet var promotionalCodePrice: UITextField!
+    @IBOutlet var dateEventPicker: UIDatePicker!
     
     let cellIdentifier = "cellIdentifier"
     
@@ -76,18 +80,32 @@ class AddTicketsViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     @IBAction func handleSubmitEvent(_ sender: Any) {
-        TicketServices.default.putTicket(tickets: tickets)
-        EventServices.default.getEvents(token: self.token) { responseEvent in
-            let events = responseEvent as [Event]
-
-            self.pressDelegate?.updateEvents(events: events)
-            for vc in self.navigationController!.viewControllers {
-                if let evc = vc as? EventViewController {
-                    evc.events = events
-                    self.navigationController?.popToViewController(evc, animated: true)
+        
+        let alert = UIAlertController(title: "Are you sure", message: "You will not be able to update this later", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { action in
+            self.dateEventPicker.datePickerMode = UIDatePicker.Mode.date
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd MMMM yyyy"
+            let selectedDate = dateFormatter.string(from: self.dateEventPicker.date)
+            
+            EventServices.default.addDate(idEvent: self.eventID, date: selectedDate);
+            TicketServices.default.setPromotionalCode(promotionalCode: PromotionalCode(idEvent: self.eventID, name: self.promotionalCodeName.text!, price: self.promotionalCodePrice.text!, quantity: self.promotionalCodeQuantity.text!))
+            TicketServices.default.putTicket(tickets: self.tickets)
+            EventServices.default.getEvents(token: self.token) { responseEvent in
+                let events = responseEvent as [Event]
+                
+                self.pressDelegate?.updateEvents(events: events)
+                for vc in self.navigationController!.viewControllers {
+                    if let evc = vc as? EventViewController {
+                        evc.events = events
+                        self.navigationController?.popToViewController(evc, animated: true)
+                    }
                 }
             }
-        }
+        }))
+        
+        self.present(alert, animated: true)
     }
     
     func setBorder(button: UIButton) -> UIButton{
@@ -105,8 +123,8 @@ class AddTicketsViewController: UIViewController, UITableViewDelegate, UITableVi
 
 
 extension AddTicketsViewController: AddTicketProtocol {
-    func addTicket(name: String, quantity: String, price: String) {
-        tickets.append(Ticket(idEvent: eventID, name: name, price: Double(price)!, quantity: Int(quantity)!))
+    func addTicket(name: String, quantity: Int, price: String) {
+        tickets.append(Ticket(idEvent: eventID, name: name, price: price, quantity: quantity, quantityUpdated: nil))
         tableView.reloadData()
     }
 }

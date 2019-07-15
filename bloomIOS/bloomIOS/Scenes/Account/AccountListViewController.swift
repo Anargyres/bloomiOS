@@ -9,18 +9,17 @@
 import UIKit
 
 class AccountListViewController: UIViewController {
-
+    
+    var window: UIWindow?
     var token: String!
 
+    @IBOutlet var deconnexionButton: UIButton!
     @IBOutlet var personnalInformationsButton: UIButton!
-    @IBOutlet var eventHistoryButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "My account"
-        self.navigationController?.navigationBar.titleTextAttributes =
-            [NSAttributedString.Key.font: UIFont(name: "AvenirNextCondensed-Regular", size: 21)!]
         personnalInformationsButton = setBorder(button: personnalInformationsButton)
-        eventHistoryButton = setBorder(button: eventHistoryButton)
+        deconnexionButton = setBorder(button: deconnexionButton)
     }
     
     @IBAction func handlePersonnalInformationsPress(_ sender: Any) {
@@ -28,22 +27,33 @@ class AccountListViewController: UIViewController {
             self.personnalInformationsButton.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
         }, completion: { _ in UIView.animate(withDuration: 0.1) {
             self.personnalInformationsButton.transform = CGAffineTransform.identity
+            AccountServices.default.getUserInfo(token: self.token, completion: { res in
+                let next = PersonnalInformationsViewController()
+                next.manager = res
+                self.navigationController?.pushViewController(next, animated: true)
+            })
         }})
     }   
     
+    
+    @IBAction func handleDeconnexionPress(_ sender: Any) {
         
-    @IBAction func handleEventsPress(_ sender: Any) {
         UIView.animate(withDuration: 0.1, animations: {
-            self.eventHistoryButton.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+            self.deconnexionButton.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
         }, completion: { _ in UIView.animate(withDuration: 0.1) {
-            self.eventHistoryButton.transform = CGAffineTransform.identity
-        }})
+            self.deconnexionButton.transform = CGAffineTransform.identity
+            
+            let loginViewController = LoginViewController()
+            let navigationController = UINavigationController(rootViewController: loginViewController)
+            let w = UIWindow(frame: UIScreen.main.bounds)
+            w.rootViewController = navigationController
+            w.makeKeyAndVisible()
+            self.window = w
+            }})
     }
     
     func setBorder(button: UIButton) -> UIButton{
         button.layer.cornerRadius = 10
-        button.layer.borderWidth = 1.0
-        button.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         button.layer.masksToBounds = true
         button.layer.shadowColor = #colorLiteral(red: 0.008968460207, green: 0.02003048991, blue: 0.1091370558, alpha: 1)
         button.layer.shadowOffset = CGSize(width: 5.0, height: -5.0)
@@ -51,18 +61,4 @@ class AccountListViewController: UIViewController {
         
         return button
     }
-    
-    
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

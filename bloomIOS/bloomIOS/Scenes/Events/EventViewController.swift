@@ -27,14 +27,13 @@ class EventViewController: UICollectionViewController, UICollectionViewDelegateF
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.navigationItem.title = "Events"
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(self.handleRefreshPress))
         self.navigationItem.rightBarButtonItems = [
             UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.handleAddEventPress)),
-        UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(self.handleMyAccountPress))
+        UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(self.handleMyAccountPress))
         ]
         
-        atvc.pressDelegate = self
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.008968460207, green: 0.02003048991, blue: 0.1091370558, alpha: 1)
         navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
@@ -68,7 +67,7 @@ class EventViewController: UICollectionViewController, UICollectionViewDelegateF
         cell.layer.masksToBounds = true
         
 
-        let requestUrl = "http://localhost:3000/images/\(self.events[indexPath.row].SImage!)"
+        let requestUrl = "https://lit-sands-88177.herokuapp.com/images/\(self.events[indexPath.row].SImage!)"
         
         Alamofire.request(requestUrl, method: .get)
             .responseData(completionHandler: { (responseData) in
@@ -115,19 +114,20 @@ class EventViewController: UICollectionViewController, UICollectionViewDelegateF
         self.navigationController?.pushViewController(alvc, animated: true)
     }
     
+    @objc func handleRefreshPress(){
+        EventServices.default.getEvents(token: token) { responseEvent in
+            let newEvents = responseEvent as [Event]
+            self.events = newEvents
+            self.collectionView.reloadData()
+        }
+    }
+    
     @objc func onClickItemCollection(sender: UITapGestureRecognizer){
         
         if let cell = sender.view, let indexPath = self.collectionView.indexPath(for: cell as! UICollectionViewCell) {
             let next = AddEventViewController.newInstance(event: self.events[indexPath.row], token: self.token)
             self.navigationController?.pushViewController(next, animated: true)
         }
-    }
-}
-
-extension EventViewController: UpdateEventsProtocol {
-    func updateEvents(events: [Event]) {
-        self.events = events
-        collectionView.reloadData()
     }
 }
 

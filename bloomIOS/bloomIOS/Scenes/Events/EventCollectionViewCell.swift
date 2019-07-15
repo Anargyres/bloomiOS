@@ -27,6 +27,4 @@ class EventCollectionViewCell: UICollectionViewCell {
     @IBAction func dropEventButton(_ sender: Any) {
         delegate?.delete(cell: self)
     }
-    
-
 }

@@ -1,28 +1,26 @@
 //
-//  Ticket.swift
+//  PromotionalCode.swift
 //  bloomIOS
 //
-//  Created by Tristan Luong on 12/04/2019.
+//  Created by Tristan Luong on 31/05/2019.
 //  Copyright © 2019 Tristan Luong. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-public class Ticket {
+public class PromotionalCode {
     
     var idEvent: String
     var name: String
     var price: String
-    var quantity: Int
-    var quantityUpdated: Int?
-
-    init(idEvent: String, name: String, price: String, quantity: Int, quantityUpdated: Int?){
+    var quantity: String
+    
+    init(idEvent: String, name: String, price: String, quantity: String){
         self.idEvent =  idEvent
         self.name = name
         self.price = price
         self.quantity = quantity
-        self.quantityUpdated = quantityUpdated
     }
     
     
@@ -34,7 +32,7 @@ public class Ticket {
             "quantity": quantity as Any,
         ]
     }
-
+    
 }
 
 

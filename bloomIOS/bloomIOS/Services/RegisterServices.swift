@@ -16,7 +16,7 @@ public class RegisterServices {
         
         let parameters: Parameters = ["email": email]
             
-        Alamofire.request("http://localhost:3000/register", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { (res) in
+        Alamofire.request("https://lit-sands-88177.herokuapp.com/register", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { (res) in
             guard let json = res.result.value as? [String: Any],
             let error = json["error"] as? String
             else {

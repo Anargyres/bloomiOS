@@ -38,8 +38,9 @@ class AddEventViewController: UIViewController {
         self.view.backgroundColor = #colorLiteral(red: 0.008968460207, green: 0.02003048991, blue: 0.1091370558, alpha: 1)
         self.navigationItem.title = "Create event"
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.handleTicketsPress))
-        
+        if(event != nil){
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(self.handleDetailEventPress))
+        }
         handleAddEventButton.layer.cornerRadius = 10
         handleAddEventButton.layer.borderWidth = 1
         handleAddEventButton.layer.borderColor = UIColor.black.cgColor
@@ -69,18 +70,17 @@ class AddEventViewController: UIViewController {
             self.longitudeLabel.text = event?.longitude
             self.promotionalCodeLabel.text = event?.promotionalCode
             
-            guard let imageName = event?.SImage as? String
+            guard let imageName = event?.SImage
             else {
                 return
             }
             
-            let requestUrl = "http://localhost:3000/images/\(imageName)"
-            
+            let requestUrl = "https://lit-sands-88177.herokuapp.com/images/\(imageName)"
             
             Alamofire.request(requestUrl, method: .get)
                 .responseData(completionHandler: { (responseData) in
                     self.imageView.image = UIImage(data: responseData.data!)
-                })
+            })
         }
     }
     
@@ -91,8 +91,12 @@ class AddEventViewController: UIViewController {
 
     }
     
-    @objc func handleTicketsPress() {
-        
+    @objc func handleDetailEventPress() {
+        EventServices.default.getResumeTicket(eventTitle: (event?.title)!, completion: { res in
+            let aervc = AllEventsResumeViewController()
+            aervc.tickets = res
+            self.navigationController?.pushViewController(aervc, animated: true)
+        })
     }
  
     @IBAction func createButton(_ sender: UIButton) {
@@ -118,7 +122,7 @@ class AddEventViewController: UIViewController {
                     self.navigationController?.pushViewController(next, animated: true)
                 })
             } else {
-                EventServices.default.updateEvent(event: self.event!, title: (self.event?.title)!)
+                EventServices.default.updateEvent(event: newEvent, title: (event?.title)!)
             }
         }
     }
